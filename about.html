@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050907">
+  <meta name="description" content="QRENNT — независимая digital-студия. Наша философия, подход и взгляд на создание цифровых проектов.">
+  <title>About QRENNT — Independent Digital Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="about.css">
+  <script src="about.js" defer></script>
+</head>
+<body>
+
+  <canvas id="particles"></canvas>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="QRENNT — главная">
+      QRENNT<span>.</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="nav">
+      <a href="index.html" data-i18n="navHome">Главная</a>
+      <a href="projects.html" data-i18n="navProjects">Проекты</a>
+      <a href="about.html" class="active" data-i18n="navAbout">О QRENNT</a>
+      <a href="services.html" data-i18n="navServices">Услуги</a>
+      <a href="reviews.html" data-i18n="navReviews">Отзывы</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="language-switcher" aria-label="Выбор языка">
+        <button type="button" data-lang="ru" class="active" aria-pressed="true">RU</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+      </div>
+      <a class="header-contact" href="https://t.me/qrennt_workich" target="_blank" rel="noopener">
+        <span data-i18n="navContact">Связаться</span>
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="hero-grid"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow" data-i18n="eyebrow">
+          INDEPENDENT DIGITAL STUDIO
+        </div>
+
+        <h1>
+          <span data-i18n="heroLine1">BEYOND</span>
+          <span class="gradient-text" data-i18n="heroLine2">THE ORDINARY.</span>
+        </h1>
+
+        <p class="hero-description" data-i18n="heroText">
+          QRENNT — независимая digital-студия, где идеи обретают форму,
+          характер и собственное цифровое пространство.
+        </p>
+
+        <a href="#philosophy" class="primary-button">
+          <span data-i18n="discover">Открыть нашу философию</span>
+          <span>↘</span>
+        </a>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb-ring ring-one"></div>
+        <div class="orb-ring ring-two"></div>
+        <div class="orb-ring ring-three"></div>
+
+        <div class="orb-core">
+          <div class="orb-light"></div>
+          <div class="orb-center">Q</div>
+        </div>
+
+        <span class="floating-label label-one">CREATIVITY</span>
+        <span class="floating-label label-two">DIGITAL</span>
+        <span class="floating-label label-three">IDENTITY</span>
+      </div>
+
+      <div class="hero-bottom">
+        <span data-i18n="heroBottom">DESIGN WITH A POINT OF VIEW</span>
+        <span>QRENNT — 2026</span>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section philosophy-section reveal" id="philosophy">
+      <div class="section-topline">
+        <span class="section-number">01 /</span>
+        <span data-i18n="philosophyLabel">НАША ФИЛОСОФИЯ</span>
+      </div>
+
+      <div class="philosophy-grid">
+        <h2>
+          <span data-i18n="philosophyLine1">WE DON'T FOLLOW</span>
+          <span class="gradient-text" data-i18n="philosophyLine2">THE DEFAULT.</span>
+        </h2>
+
+        <div class="philosophy-copy">
+          <p data-i18n="philosophyText">
+            Мы верим, что цифровой проект — это не просто набор страниц.
+            Это атмосфера, впечатление и способ рассказать о своей идее.
+          </p>
+          <p data-i18n="philosophyTextTwo">
+            Поэтому мы уделяем внимание не только внешнему виду,
+            но и структуре, удобству, деталям и общему ощущению от продукта.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section values-section reveal">
+      <div class="section-topline">
+        <span class="section-number">02 /</span>
+        <span data-i18n="valuesLabel">ЧТО ДЛЯ НАС ВАЖНО</span>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <span class="value-index">01</span>
+          <div class="value-icon">✳</div>
+          <h3 data-i18n="valueOneTitle">Характер</h3>
+          <p data-i18n="valueOneText">
+            У каждого проекта должно быть собственное лицо и узнаваемая подача.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="value-index">02</span>
+          <div class="value-icon">⌘</div>
+          <h3 data-i18n="valueTwoTitle">Технологии</h3>
+          <p data-i18n="valueTwoText">
+            Используем современные инструменты, чтобы воплощать идеи в работающие решения.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="value-index">03</span>
+          <div class="value-icon">◇</div>
+          <h3 data-i18n="valueThreeTitle">Детали</h3>
+          <p data-i18n="valueThreeText">
+            Продумываем композицию, типографику, анимации и взаимодействие с сайтом.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="section direction-section reveal">
+      <div class="section-topline">
+        <span class="section-number">03 /</span>
+        <span data-i18n="directionLabel">НАПРАВЛЕНИЯ</span>
+      </div>
+
+      <div class="direction-heading">
+        <h2>
+          <span data-i18n="directionLine1">IDEAS INTO</span>
+          <span class="gradient-text" data-i18n="directionLine2">DIGITAL FORM.</span>
+        </h2>
+        <p data-i18n="directionText">
+          Создаём цифровые решения, которые помогают представить идею
+          и сделать её заметной.
+        </p>
+      </div>
+
+      <div class="direction-list">
+        <div class="direction-item">
+          <span>01</span>
+          <h3 data-i18n="directionOne">Веб-сайты и лендинги</h3>
+          <span class="direction-arrow">↗</span>
+        </div>
+        <div class="direction-item">
+          <span>02</span>
+          <h3 data-i18n="directionTwo">Визуальные концепции</h3>
+          <span class="direction-arrow">↗</span>
+        </div>
+        <div class="direction-item">
+          <span>03</span>
+          <h3 data-i18n="directionThree">Интерактивные интерфейсы</h3>
+          <span class="direction-arrow">↗</span>
+        </div>
+        <div class="direction-item">
+          <span>04</span>
+          <h3 data-i18n="directionFour">Развитие и обновление проектов</h3>
+          <span class="direction-arrow">↗</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process-section reveal">
+      <div class="section-topline">
+        <span class="section-number">04 /</span>
+        <span data-i18n="processLabel">НАШ ПОДХОД</span>
+      </div>
+
+      <h2 data-i18n="processTitle">FROM IDEA TO EXPERIENCE.</h2>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <span>01</span>
+          <h3 data-i18n="processOneTitle">Понимание</h3>
+          <p data-i18n="processOneText">
+            Разбираемся в задаче, целях и характере будущего проекта.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span>02</span>
+          <h3 data-i18n="processTwoTitle">Концепция</h3>
+          <p data-i18n="processTwoText">
+            Определяем визуальное направление, структуру и основные решения.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span>03</span>
+          <h3 data-i18n="processThreeTitle">Создание</h3>
+          <p data-i18n="processThreeText">
+            Собираем страницы, добавляем детали, анимации и функциональность.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span>04</span>
+          <h3 data-i18n="processFourTitle">Результат</h3>
+          <p data-i18n="processFourText">
+            Проверяем проект и готовим его к публикации.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta reveal">
+      <div class="cta-glow"></div>
+      <span class="cta-label" data-i18n="ctaLabel">YOUR IDEA STARTS HERE</span>
+
+      <h2>
+        <span data-i18n="ctaLine1">LET'S CREATE</span>
+        <span class="gradient-text" data-i18n="ctaLine2">SOMETHING REAL.</span>
+      </h2>
+
+      <p data-i18n="ctaText">
+        Есть идея или проект? Давайте обсудим, каким он может стать.
+      </p>
+
+      <a href="https://t.me/qrennt_workich" class="primary-button" target="_blank" rel="noopener">
+        <span data-i18n="ctaButton">Обсудить проект</span>
+        <span>↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">QRENNT<span>.</span></a>
+    <p>© 2026 QRENNT. <span data-i18n="rights">Все права защищены.</span></p>
+    <a href="https://t.me/qrennt_workich" target="_blank" rel="noopener">TELEGRAM ↗</a>
+  </footer>
+
+</body>
+</html>

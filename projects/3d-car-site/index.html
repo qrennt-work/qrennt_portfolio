@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BLACK PANAMERA | Porsche</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script
+        type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+    </script>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-content">
+            <p class="intro-subtitle">PORSCHE PANAMERA 4S</p>
+            <h1>BLACK <span>PANAMERA</span></h1>
+            <div class="intro-loader">
+                <div class="intro-loader-progress"></div>
+            </div>
+            <p class="intro-loading">PREPARING EXPERIENCE</p>
+        </div>
+    </div>
+
+    <header class="header">
+        <a href="#" class="logo">BLACK<span> PANAMERA</span></a>
+
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#about">О машине</a>
+            <a href="#configurator">Конфигуратор</a>
+            <a href="#gallery">Галерея</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="subtitle">PORSCHE PANAMERA 4S</p>
+
+                <h1>BLACK<br>PANAMERA</h1>
+
+                <p class="description">
+                    Элегантность. Мощность. Характер.
+                    Автомобиль, который невозможно не заметить.
+                </p>
+
+                <a href="#configurator" class="main-button">
+                    НАСТРОИТЬ АВТОМОБИЛЬ
+                </a>
+            </div>
+
+            <div class="car-container">
+
+                <model-viewer
+    id="panameraModel"
+    src="panamera.glb"
+    alt="Porsche Panamera 3D"
+    camera-controls
+    shadow-intensity="0"
+    exposure="1"
+    environment-image="neutral"
+    interaction-prompt="none"
+    loading="eager"
+    reveal="auto">
+</model-viewer>
+
+                <div class="model-message" id="modelMessage">
+                    Загрузка 3D-модели...
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="configurator" id="configurator">
+
+            <p class="subtitle">YOUR PERSONAL PORSCHE</p>
+
+            <h2>КОНФИГУРАТОР</h2>
+
+            <p class="config-description">
+                Выбери цвет кузова своей Panamera
+            </p>
+
+            <div class="color-options">
+
+                <button class="color-option active" data-color="black">
+                    <span class="color-circle black"></span>
+                    <span>BLACK</span>
+                </button>
+
+                <button class="color-option" data-color="white">
+                    <span class="color-circle white"></span>
+                    <span>WHITE</span>
+                </button>
+
+                <button class="color-option" data-color="red">
+                    <span class="color-circle red"></span>
+                    <span>RED</span>
+                </button>
+
+            </div>
+
+            <p class="selected-color" id="selectedColor">
+                SELECTED: BLACK
+            </p>
+
+        </section>
+
+        <section class="about" id="about">
+
+            <p class="subtitle">ABOUT THE CAR</p>
+
+            <h2>БОЛЬШЕ ЧЕМ АВТОМОБИЛЬ</h2>
+
+            <p>
+                Porsche Panamera объединяет спортивный характер,
+                комфорт и узнаваемый дизайн.
+                Это автомобиль для тех, кто ценит каждую деталь.
+            </p>
+
+        </section>
+
+        <section class="experience" id="experience">
+
+            <div class="experience-heading">
+                <p class="subtitle">THE ART OF ENGINEERING</p>
+                <h2>PANAMERA EXPERIENCE</h2>
+                <p class="experience-description">
+                    Спортивный характер. Премиальный комфорт.
+                    Уникальная философия Porsche.
+                </p>
+            </div>
+
+            <div class="experience-grid">
+
+                <div class="experience-card">
+                    <span class="experience-number">01</span>
+                    <p class="experience-label">BRAND</p>
+                    <h3>PORSCHE</h3>
+                    <p>Легендарный немецкий автомобильный бренд.</p>
+                </div>
+
+                <div class="experience-card">
+                    <span class="experience-number">02</span>
+                    <p class="experience-label">MODEL</p>
+                    <h3>PANAMERA 4S</h3>
+                    <p>Спортивный характер в кузове Gran Turismo.</p>
+                </div>
+
+                <div class="experience-card">
+                    <span class="experience-number">03</span>
+                    <p class="experience-label">DESIGN</p>
+                    <h3>SPORT LUXURY</h3>
+                    <p>Сочетание динамичного силуэта и элегантности.</p>
+                </div>
+
+                <div class="experience-card">
+                    <span class="experience-number">04</span>
+                    <p class="experience-label">PHILOSOPHY</p>
+                    <h3>PERFORMANCE</h3>
+                    <p>Внимание к деталям и спортивное наследие.</p>
+                </div>
+
+            </div>
+
+            <div class="experience-bottom">
+                <p>DISCOVER YOUR PANAMERA</p>
+                <a href="#home" class="experience-button">
+                    DISCOVER THE CAR <span>↗</span>
+                </a>
+            </div>
+
+        </section>
+
+        <section class="gallery" id="gallery">
+
+            <p class="subtitle">DESIGN</p>
+
+            <h2>ДИЗАЙН И ХАРАКТЕР</h2>
+
+            <img src="panamera.jpg" alt="Porsche Panamera">
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>BLACK PANAMERA © 2026</p>
+    </footer>
+
+</body>
+</html>
