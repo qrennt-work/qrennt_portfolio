@@ -5,7 +5,7 @@
   --green: #70e6a0;
   --green-bright: #a0ffc1;
   --text: #edf5ef;
-  --muted: #829188;
+  --muted: #96a69b;
   --line: rgba(180, 220, 195, .13);
   --font-main: 'Manrope', sans-serif;
   --font-display: 'Space Grotesk', sans-serif;
@@ -26,6 +26,7 @@ body {
   color: var(--text);
   font-family: var(--font-main);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -50,6 +51,31 @@ button {
   opacity: .65;
 }
 
+.ambient {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: .08;
+}
+
+.ambient-one {
+  width: 300px;
+  height: 300px;
+  background: #28a65e;
+  top: 10%;
+  left: -150px;
+}
+
+.ambient-two {
+  width: 300px;
+  height: 300px;
+  background: #42d77f;
+  bottom: 10%;
+  right: -150px;
+}
+
 /* HEADER */
 
 .site-header {
@@ -66,6 +92,7 @@ button {
   border-bottom: 1px solid rgba(255,255,255,.07);
   background: rgba(5,9,7,.25);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .logo {
@@ -92,8 +119,8 @@ button {
 
 .site-header .nav a {
   color: #bdc9c0;
-  font-size: 10px;
-  letter-spacing: .07em;
+  font-size: 12px;
+  letter-spacing: .04em;
   transition: color .25s ease;
 }
 
@@ -136,7 +163,7 @@ button {
   border: 1px solid rgba(112,230,160,.35);
   padding: 12px 16px;
   border-radius: 3px;
-  font-size: 10px;
+  font-size: 11px;
   white-space: nowrap;
   transition: .3s ease;
 }
@@ -160,6 +187,7 @@ button {
   height: 1px;
   background: white;
   margin: 6px;
+  transition: transform .3s ease;
 }
 
 /* HERO */
@@ -236,9 +264,9 @@ button {
 
 .hero-description {
   max-width: 430px;
-  color: #9caea2;
-  line-height: 1.9;
-  font-size: 13px;
+  color: #a8b8ad;
+  line-height: 1.85;
+  font-size: 15px;
   margin: 32px 0 0;
 }
 
@@ -252,15 +280,15 @@ button {
   gap: 18px;
   color: #6f8175;
   font-family: var(--font-display);
-  font-size: 8px;
-  letter-spacing: .2em;
+  font-size: 9px;
+  letter-spacing: .16em;
 }
 
 .hero-bottom-info span:last-child {
   margin-left: auto;
 }
 
-/* PROJECTS BUTTON */
+/* PROJECT BUTTON */
 
 .hero-project-action {
   position: relative;
@@ -315,8 +343,23 @@ button {
   border-radius: 13px;
   background: rgba(140,255,176,.1);
   color: #a5ffbd;
-  font-size: 22px;
+  font-size: 0;
+  position: relative;
   transition: transform .4s ease;
+}
+
+.button-icon::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #e2ffed, #70e6a0 55%, #20a45b);
+  clip-path: polygon(
+    50% 0%, 61% 35%, 100% 50%,
+    61% 65%, 50% 100%,
+    39% 65%, 0% 50%, 39% 35%
+  );
+  filter: drop-shadow(0 0 7px rgba(112,230,160,.6));
+  transform: rotate(0deg);
 }
 
 .all-projects-button:hover .button-icon {
@@ -331,13 +374,14 @@ button {
 }
 
 .button-text strong {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
 }
 
 .button-text small {
-  color: #94a99a;
-  font-size: 10px;
+  color: #a0b3a5;
+  font-size: 11px;
+  line-height: 1.5;
 }
 
 .button-arrow {
@@ -348,8 +392,17 @@ button {
   border-radius: 50%;
   background: #9affb4;
   color: #07120a;
-  font-size: 17px;
+  font-size: 0;
+  flex-shrink: 0;
+  position: relative;
   transition: transform .3s ease;
+}
+
+.button-arrow::before {
+  content: "↗";
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1;
 }
 
 .all-projects-button:hover .button-arrow {
@@ -368,7 +421,7 @@ button {
     box-shadow: 0 10px 35px rgba(0,0,0,.25), 0 0 15px rgba(50,255,120,.05);
   }
   50% {
-    box-shadow: 0 10px 35px rgba(0,0,0,.25), 0 0 28px rgba(50,255,120,.15);
+    box-shadow 0 10px 35px rgba(0,0,0,.25), 0 0 28px rgba(50,255,120,.15);
   }
 }
 
@@ -524,6 +577,23 @@ button {
 .marquee-track i {
   color: var(--green);
   font-style: normal;
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.marquee-track i::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  clip-path: polygon(
+    50% 0%, 61% 35%, 100% 50%,
+    61% 65%, 50% 100%,
+    39% 65%, 0% 50%, 39% 35%
+  );
 }
 
 /* COMMON SECTIONS */
@@ -577,8 +647,8 @@ button {
 
 .intro-text p {
   color: var(--muted);
-  font-size: 12px;
-  line-height: 2;
+  font-size: 14px;
+  line-height: 1.9;
   margin: 24px 0;
 }
 
@@ -587,7 +657,7 @@ button {
   align-items: center;
   gap: 12px;
   color: #d3dfd7;
-  font-size: 11px;
+  font-size: 12px;
   transition: color .25s ease;
 }
 
@@ -612,7 +682,7 @@ button {
 .view-all-link {
   color: var(--green);
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   white-space: nowrap;
 }
 
@@ -766,18 +836,20 @@ button {
 
 .featured-info h3 {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 16px;
   margin: 0 0 8px;
 }
 
 .featured-info p {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
+  line-height: 1.65;
   margin: 0;
 }
 
 .featured-arrow {
   color: var(--green);
+  font-family: var(--font-display);
   font-size: 22px;
 }
 
@@ -791,7 +863,7 @@ button {
   border: 1px solid rgba(112,230,160,.35);
   color: var(--green);
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   transition: .3s ease;
 }
 
@@ -800,8 +872,34 @@ button {
   border-color: var(--green);
 }
 
-.bottom-button-icon { font-size: 19px; }
-.bottom-button-arrow { font-size: 20px; }
+.bottom-button-icon {
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.bottom-button-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  clip-path: polygon(
+    50% 0%, 61% 35%, 100% 50%,
+    61% 65%, 50% 100%,
+    39% 65%, 0% 50%, 39% 35%
+  );
+}
+
+.bottom-button-arrow {
+  font-size: 0;
+  position: relative;
+}
+
+.bottom-button-arrow::before {
+  content: "↗";
+  font-size: 20px;
+}
 
 /* MANIFESTO */
 
@@ -841,7 +939,7 @@ button {
 .contact-section > p {
   color: var(--muted);
   max-width: 440px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
   text-align: center;
 }
@@ -939,7 +1037,7 @@ button {
   left: 22px;
   color: var(--green);
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: .17em;
 }
 
@@ -951,7 +1049,7 @@ button {
 .pricing-kicker {
   color: var(--green);
   font-family: var(--font-display);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: .2em;
 }
@@ -966,8 +1064,8 @@ button {
 
 .about-me-content p {
   color: var(--muted);
-  font-size: 12px;
-  line-height: 2;
+  font-size: 14px;
+  line-height: 1.9;
   margin: 18px 0;
 }
 
@@ -984,7 +1082,7 @@ button {
   background: rgba(112,230,160,.035);
   color: #b8d5c1;
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: .1em;
   transition: .3s ease;
 }
@@ -995,7 +1093,7 @@ button {
   background: rgba(112,230,160,.08);
 }
 
-/* SERVICES PREVIEW */
+/* SERVICES */
 
 .services-preview {
   background: #080e0b;
@@ -1016,6 +1114,7 @@ button {
   border: 1px solid var(--line);
   background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(112,230,160,.025));
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .service-mini {
@@ -1037,13 +1136,13 @@ button {
 
 .service-mini h3 {
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 35px;
 }
 
 .service-mini p {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -1083,7 +1182,7 @@ button {
 .pricing-heading > p {
   max-width: 310px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.9;
   margin: 0 0 7px;
 }
@@ -1121,7 +1220,7 @@ button {
 .pricing-number {
   color: var(--green);
   font-family: var(--font-display);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: .16em;
 }
 
@@ -1148,7 +1247,7 @@ button {
 .pricing-description {
   min-height: 66px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.8;
 }
 
@@ -1163,7 +1262,7 @@ button {
 
 .pricing-price span {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .pricing-price strong {
@@ -1186,17 +1285,23 @@ button {
   position: relative;
   padding-left: 20px;
   color: #b8c8bd;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.6;
 }
 
 .pricing-card li::before {
-  content: "✳";
+  content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--green);
-  font-size: 10px;
+  left: 1px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  clip-path: polygon(
+    50% 0%, 61% 35%, 100% 50%,
+    61% 65%, 50% 100%,
+    39% 65%, 0% 50%, 39% 35%
+  );
 }
 
 .pricing-button {
@@ -1210,7 +1315,7 @@ button {
   border: 1px solid rgba(112,230,160,.35);
   color: var(--green);
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 11px;
   transition: .3s ease;
 }
 
@@ -1227,7 +1332,7 @@ button {
 .pricing-note,
 .reviews-note {
   color: #718278;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.8;
   margin-top: 22px;
 }
@@ -1274,7 +1379,7 @@ button {
 .review-status {
   color: #829188;
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: .16em;
 }
 
@@ -1288,8 +1393,8 @@ button {
 .review-card > p {
   flex: 1;
   color: #b8c8bd;
-  font-size: 11px;
-  line-height: 1.9;
+  font-size: 14px;
+  line-height: 1.8;
   margin: 20px 0 25px;
 }
 
@@ -1322,12 +1427,12 @@ button {
 
 .review-author strong {
   color: #e4eee7;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .review-author span {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 /* CONTACT */
@@ -1364,7 +1469,7 @@ button {
   background: var(--green);
   color: #06100a;
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   transition: .3s ease;
 }
@@ -1378,7 +1483,7 @@ button {
 .email-link {
   margin-top: 22px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 /* FOOTER */
@@ -1393,7 +1498,7 @@ button {
   border-top: 1px solid var(--line);
   color: #75847a;
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: .13em;
   position: relative;
   z-index: 2;
@@ -1406,7 +1511,7 @@ button {
 
 .footer-links a {
   color: #829188;
-  font-size: 8px;
+  font-size: 9px;
   transition: color .25s ease;
 }
 
@@ -1538,75 +1643,180 @@ button {
     display: flex;
   }
 
+  .site-header .nav a {
+    font-size: 14px;
+  }
+
   .header-right {
     gap: 5px;
   }
 
   .header-contact {
     padding: 10px 9px;
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .language-switch button {
     padding: 8px 5px;
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .menu-toggle {
     display: block;
   }
 
+  .menu-toggle span {
+    width: 22px;
+  }
+
   .hero {
-    min-height: 760px;
+    min-height: auto;
     height: auto;
-    padding: 145px 7vw 110px;
+    max-height: none;
+    padding: 125px 7vw 80px;
     align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-topline {
+    font-size: 9px;
+    letter-spacing: .13em;
+    margin-bottom: 25px;
   }
 
   .hero h1 {
-    font-size: clamp(54px, 12vw, 82px);
+    font-size: clamp(47px, 11.5vw, 72px);
+    line-height: .95;
+    letter-spacing: -.075em;
+    max-width: 100%;
+    overflow-wrap: normal;
   }
 
   .hero-description {
-    max-width: 330px;
-    font-size: 12px;
+    max-width: 350px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 22px;
   }
+
+  /* Button above orb on mobile */
 
   .hero-project-action {
     margin-top: 25px;
     width: 100%;
+    max-width: 380px;
+    align-items: flex-start;
   }
 
   .all-projects-button {
     width: 100%;
     min-width: 0;
+    min-height: 76px;
+    padding: 12px 14px;
+    gap: 12px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 6;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+
+  .button-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .button-icon::before {
+    width: 15px;
+    height: 15px;
+  }
+
+  .button-text strong {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .button-text small {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .button-arrow {
+    width: 31px;
+    height: 31px;
+  }
+
+  .button-arrow::before {
+    font-size: 17px;
   }
 
   .button-hint {
     font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+
+  /* Orb moved behind lower content */
+
+  .hero-visual {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .orb-scene {
-    width: 68vw;
-    right: -16%;
-    top: 65%;
-    opacity: .55;
+    width: min(72vw, 330px);
+    right: -13%;
+    top: auto;
+    bottom: 4%;
+    transform: none;
+    opacity: .43;
   }
 
+  .orb-core {
+    inset: 24%;
+  }
+
+  .orb-ring {
+    opacity: .7;
+  }
+
+  .hero-content {
+    z-index: 5;
+  }
+
+  .floating-word {
+    font-size: 8px;
+    opacity: .5;
+  }
+
+  .floating-one { top: 15%; left: 8%; }
+  .floating-two { top: 62%; left: 7%; }
+  .floating-three { top: 44%; right: 5%; font-size: 7px; }
+  .floating-four { bottom: 9%; right: 10%; }
+
   .hero-bottom-info {
-    left: 7vw;
-    right: 7vw;
-    bottom: 25px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: 55px;
+    font-size: 8px;
+    letter-spacing: .12em;
+    max-width: 100%;
+    z-index: 5;
   }
 
   .hero-bottom-info span:last-child {
     display: none;
   }
 
-  .floating-one { top: 15%; left: 8%; }
-  .floating-two { top: 54%; left: 7%; }
-  .floating-three { top: 39%; right: 5%; font-size: 7px; }
-  .floating-four { bottom: 16%; right: 10%; }
+  /* Section spacing */
 
   .intro-section,
   .featured-section,
@@ -1619,6 +1829,17 @@ button {
     padding: 85px 7vw;
   }
 
+  .section-label {
+    font-size: 9px;
+    letter-spacing: .12em;
+    gap: 12px;
+    line-height: 1.6;
+  }
+
+  .section-label span:last-child {
+    text-align: right;
+  }
+
   .intro-grid {
     padding-top: 45px;
   }
@@ -1626,11 +1847,24 @@ button {
   .intro-grid h2,
   .featured-heading h2,
   .services-preview h2 {
-    font-size: clamp(40px, 11vw, 68px);
+    font-size: clamp(40px, 10.5vw, 68px);
+    line-height: 1;
   }
+
+  .intro-text p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .text-link {
+    font-size: 13px;
+  }
+
+  /* Projects */
 
   .featured-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .featured-heading {
@@ -1641,10 +1875,38 @@ button {
   .view-all-link {
     display: inline-block;
     margin-top: 22px;
+    font-size: 12px;
   }
 
   .featured-image {
     height: 230px;
+  }
+
+  .featured-info {
+    padding: 20px;
+  }
+
+  .featured-info h3 {
+    font-size: 15px;
+  }
+
+  .featured-info p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .all-projects-bottom {
+    max-width: 100%;
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 12px;
+    margin-top: 30px;
+  }
+
+  /* Services */
+
+  .services-preview h2 {
+    margin: 45px 0 35px;
   }
 
   .service-mini-grid {
@@ -1652,11 +1914,25 @@ button {
   }
 
   .service-mini {
-    min-height: 190px;
+    min-height: 180px;
+    padding: 23px;
   }
+
+  .service-mini h3 {
+    font-size: 18px;
+    margin-top: 28px;
+  }
+
+  .service-mini p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* About */
 
   .about-me-grid {
     padding-top: 45px;
+    gap: 35px;
   }
 
   .about-me-visual {
@@ -1679,7 +1955,20 @@ button {
 
   .about-me-content h2 {
     font-size: clamp(42px, 11vw, 60px);
+    line-height: 1;
   }
+
+  .about-me-content p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .about-skills span {
+    font-size: 9px;
+    padding: 9px 11px;
+  }
+
+  /* Pricing */
 
   .pricing-heading {
     display: block;
@@ -1689,14 +1978,18 @@ button {
   .pricing-heading h2,
   .reviews-heading h2 {
     font-size: clamp(40px, 11vw, 65px);
+    line-height: 1;
   }
 
   .pricing-heading > p {
     margin-top: 22px;
+    font-size: 14px;
+    line-height: 1.85;
   }
 
   .pricing-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .pricing-card:last-child {
@@ -1707,9 +2000,27 @@ button {
     padding: 28px 22px;
   }
 
+  .pricing-description {
+    min-height: 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
   .pricing-price strong {
     font-size: 34px;
   }
+
+  .pricing-card li {
+    font-size: 13px;
+  }
+
+  .pricing-note,
+  .reviews-note {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  /* Reviews */
 
   .reviews-heading {
     padding: 45px 0 35px;
@@ -1721,11 +2032,32 @@ button {
 
   .reviews-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .review-card:last-child {
     grid-column: auto;
   }
+
+  .review-card {
+    min-height: 230px;
+    padding: 23px;
+  }
+
+  .review-card > p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .review-author strong {
+    font-size: 12px;
+  }
+
+  .review-author span {
+    font-size: 11px;
+  }
+
+  /* Manifesto */
 
   .manifesto-section {
     min-height: 570px;
@@ -1733,7 +2065,14 @@ button {
 
   .manifesto-section h2,
   .contact-section h2 {
-    font-size: clamp(48px, 13vw, 76px);
+    font-size: clamp(48px, 12.5vw, 76px);
+    line-height: .98;
+  }
+
+  .manifesto-section p,
+  .contact-section > p {
+    font-size: 14px;
+    line-height: 1.85;
   }
 
   .manifesto-orb {
@@ -1741,16 +2080,46 @@ button {
     height: 280px;
   }
 
+  /* Contact */
+
+  .contact-section {
+    min-height: 500px;
+  }
+
+  .contact-main-button {
+    min-height: 54px;
+    font-size: 12px;
+    padding: 0 20px;
+  }
+
+  .email-link {
+    font-size: 13px;
+  }
+
+  /* Footer */
+
   .footer {
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 7px;
+    gap: 20px;
+    padding: 28px 7vw;
+    font-size: 8px;
   }
 
   .footer > span:first-of-type {
     display: none;
   }
+
+  .footer-links {
+    gap: 18px;
+  }
+
+  .footer-links a {
+    font-size: 9px;
+  }
 }
+
+/* SMALL PHONES */
 
 @media (max-width: 380px) {
   .logo {
@@ -1761,16 +2130,44 @@ button {
     display: none;
   }
 
+  .hero {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
   .hero h1 {
-    font-size: 50px;
+    font-size: 47px;
+  }
+
+  .hero-topline {
+    font-size: 8px;
+    letter-spacing: .1em;
   }
 
   .button-text strong {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .button-text small {
     font-size: 9px;
+  }
+
+  .orb-scene {
+    width: 75vw;
+    right: -17%;
+    bottom: 3%;
+  }
+
+  .section-label {
+    font-size: 8px;
+  }
+
+  .intro-grid h2,
+  .featured-heading h2,
+  .services-preview h2,
+  .pricing-heading h2,
+  .reviews-heading h2 {
+    font-size: 40px;
   }
 }
 
