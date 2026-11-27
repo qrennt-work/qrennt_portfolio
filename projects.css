@@ -855,3 +855,13 @@ body::before {
   }
   .reveal { opacity: 1; transform: none; }
 }
+/* MOBILE SYMBOL FIX — PROJECTS */
+@media (max-width: 680px) {
+  .scroll-arrow,
+  .project-link span:last-child,
+  .cta-button,
+  .header-contact {
+    font-family: "Arial", "Segoe UI Symbol", sans-serif !important;
+    font-variant-emoji: text;
+  }
+}
