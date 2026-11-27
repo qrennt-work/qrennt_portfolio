@@ -8,117 +8,141 @@
 
 const translations = {
   ru: {
+    navHome: "Главная",
     navProjects: "Проекты",
-    navAbout: "О нас",
+    navAbout: "Обо мне",
     navServices: "Услуги",
     navReviews: "Отзывы",
-    navContact: "Связаться",
+    contact: "Связаться",
 
-    eyebrow: "НЕЗАВИСИМАЯ DIGITAL-СТУДИЯ",
-    heroLine1: "WE CREATE",
-    heroLine2: "DIGITAL WORLDS",
-    heroDescription: "Создаём сайты, визуальные системы и цифровые впечатления, которые невозможно спутать с другими.",
-    explore: "Исследовать проекты",
-    discuss: "Обсудить проект",
-    scroll: "ЛИСТАЙТЕ ВНИЗ",
-
-    philosophy: "НАША ФИЛОСОФИЯ",
-    introLine1: "WE DON'T JUST",
-    introLine2: "BUILD WEBSITES.",
-    introText: "Мы превращаем идеи в выразительные цифровые пространства. Внимание к деталям, характерный стиль и технологии — основа каждого проекта.",
-    aboutMore: "Больше о QRENNT",
-
-    portfolio: "ПОРТФОЛИО — 2026",
-    workLine1: "SELECTED",
-    workLine2: "PROJECTS.",
-    workDescription: "Каждый проект — отдельная история. Посмотри, что мы создаём.",
+    eyebrow: "НЕЗАВИСИМЫЙ DIGITAL CREATOR",
+    heroLine1: "Создаю сайты,",
+    heroLine2: "которые запоминаются.",
+    heroDescription: "Разрабатываю современные цифровые пространства, соединяя дизайн, технологии и визуальную эстетику.",
     allProjects: "Смотреть все проекты",
+    projectsSubtitle: "Мои работы и цифровые эксперименты",
+    clickToExplore: "ОТКРЫТЬ КОЛЛЕКЦИЮ",
+    location: "DIGITAL DESIGN / WEB DEVELOPMENT",
 
-    mindset: "НАШЕ МЫШЛЕНИЕ",
-    manifestoLine1: "MAKE IT",
-    manifestoLine2: "MATTER.",
-    manifestoText: "Не следовать шаблонам. Не бояться экспериментов. Создавать то, что запоминается.",
+    introTitle: "Не просто сайты. Цифровой характер.",
+    introText: "QRENNT — пространство, где идеи превращаются в современные цифровые проекты. Я уделяю внимание деталям, атмосфере, удобству и визуальной подаче.",
+    aboutMore: "Подробнее обо мне",
 
-    idea: "ЕСТЬ ИДЕЯ?",
-    contactLine1: "LET'S MAKE",
-    contactLine2: "IT REAL.",
-    startProject: "Начать проект"
+    featuredTitle: "Избранные работы.",
+    featuredCar: "Автомобильный цифровой опыт",
+    featuredAuto: "Современный автомобильный сервис",
+    featuredBarber: "Стиль и цифровая презентация",
+    featuredCyber: "Футуристичный интерактивный дизайн",
+
+    manifestoTitle: "Большие идеи начинаются с деталей.",
+    manifestoText: "Каждый элемент должен иметь смысл. Каждый экран должен создавать впечатление. Каждый проект должен отличаться.",
+
+    servicesTitle: "От идеи до результата.",
+    serviceOne: "Разработка сайтов",
+    serviceOneText: "Современные сайты с индивидуальным дизайном.",
+    serviceTwo: "Веб-дизайн",
+    serviceTwoText: "Продуманная визуальная система и интерфейсы.",
+    serviceThree: "Анимации",
+    serviceThreeText: "Интерактивность и движение в деталях.",
+    allServices: "Все услуги",
+
+    contactTitle: "Есть идея? Создадим её вместе.",
+    contactText: "Расскажи о своей задумке — обсудим, каким может быть твой проект.",
+    contactButton: "Написать в Telegram",
+
+    rights: "Все права защищены."
   },
 
   en: {
+    navHome: "Home",
     navProjects: "Projects",
     navAbout: "About",
     navServices: "Services",
     navReviews: "Reviews",
-    navContact: "Contact",
+    contact: "Contact",
 
-    eyebrow: "INDEPENDENT DIGITAL STUDIO",
-    heroLine1: "WE CREATE",
-    heroLine2: "DIGITAL WORLDS",
-    heroDescription: "We create websites, visual systems and digital experiences that stand apart.",
-    explore: "Explore projects",
-    discuss: "Discuss a project",
-    scroll: "SCROLL TO EXPLORE",
-
-    philosophy: "OUR PHILOSOPHY",
-    introLine1: "WE DON'T JUST",
-    introLine2: "BUILD WEBSITES.",
-    introText: "We turn ideas into expressive digital spaces. Attention to detail, distinctive style and technology are the foundation of every project.",
-    aboutMore: "More about QRENNT",
-
-    portfolio: "PORTFOLIO — 2026",
-    workLine1: "SELECTED",
-    workLine2: "PROJECTS.",
-    workDescription: "Every project tells a different story. Discover what we create.",
+    eyebrow: "INDEPENDENT DIGITAL CREATOR",
+    heroLine1: "I create websites,",
+    heroLine2: "that people remember.",
+    heroDescription: "I develop modern digital spaces combining design, technology and visual aesthetics.",
     allProjects: "View all projects",
+    projectsSubtitle: "My work and digital experiments",
+    clickToExplore: "EXPLORE COLLECTION",
+    location: "DIGITAL DESIGN / WEB DEVELOPMENT",
 
-    mindset: "OUR MINDSET",
-    manifestoLine1: "MAKE IT",
-    manifestoLine2: "MATTER.",
-    manifestoText: "No templates. No fear of experimentation. Create something memorable.",
+    introTitle: "More than websites. Digital character.",
+    introText: "QRENNT is a space where ideas become modern digital projects. I focus on details, atmosphere, usability and visual presentation.",
+    aboutMore: "More about me",
 
-    idea: "HAVE AN IDEA?",
-    contactLine1: "LET'S MAKE",
-    contactLine2: "IT REAL.",
-    startProject: "Start a project"
+    featuredTitle: "Selected works.",
+    featuredCar: "Automotive digital experience",
+    featuredAuto: "Modern automotive service",
+    featuredBarber: "Style and digital presentation",
+    featuredCyber: "Futuristic interactive design",
+
+    manifestoTitle: "Great ideas begin with details.",
+    manifestoText: "Every element should have meaning. Every screen should create an impression. Every project should stand apart.",
+
+    servicesTitle: "From idea to result.",
+    serviceOne: "Website development",
+    serviceOneText: "Modern websites with individual design.",
+    serviceTwo: "Web design",
+    serviceTwoText: "Thoughtful visual systems and interfaces.",
+    serviceThree: "Animations",
+    serviceThreeText: "Interactivity and movement in every detail.",
+    allServices: "All services",
+
+    contactTitle: "Have an idea? Let's create it together.",
+    contactText: "Tell me about your idea and we'll discuss your project.",
+    contactButton: "Message on Telegram",
+
+    rights: "All rights reserved."
   },
 
   ua: {
+    navHome: "Головна",
     navProjects: "Проєкти",
-    navAbout: "Про нас",
+    navAbout: "Про мене",
     navServices: "Послуги",
     navReviews: "Відгуки",
-    navContact: "Зв'язатися",
+    contact: "Зв'язатися",
 
-    eyebrow: "НЕЗАЛЕЖНА DIGITAL-СТУДІЯ",
-    heroLine1: "WE CREATE",
-    heroLine2: "DIGITAL WORLDS",
-    heroDescription: "Створюємо сайти, візуальні системи та цифрові враження, які неможливо сплутати з іншими.",
-    explore: "Переглянути проєкти",
-    discuss: "Обговорити проєкт",
-    scroll: "ГОТУЙСЯ ДО ПОДОРОЖІ",
-
-    philosophy: "НАША ФІЛОСОФІЯ",
-    introLine1: "WE DON'T JUST",
-    introLine2: "BUILD WEBSITES.",
-    introText: "Ми перетворюємо ідеї на виразні цифрові простори. Увага до деталей, особливий стиль і технології — основа кожного проєкту.",
-    aboutMore: "Більше про QRENNT",
-
-    portfolio: "ПОРТФОЛІО — 2026",
-    workLine1: "ОБРАНІ",
-    workLine2: "ПРОЄКТИ.",
-    workDescription: "Кожен проєкт — окрема історія. Подивись, що ми створюємо.",
+    eyebrow: "НЕЗАЛЕЖНИЙ DIGITAL CREATOR",
+    heroLine1: "Створюю сайти,",
+    heroLine2: "які запам'ятовуються.",
+    heroDescription: "Розробляю сучасні цифрові простори, поєднуючи дизайн, технології та візуальну естетику.",
     allProjects: "Переглянути всі проєкти",
+    projectsSubtitle: "Мої роботи та цифрові експерименти",
+    clickToExplore: "ВІДКРИТИ КОЛЕКЦІЮ",
+    location: "DIGITAL DESIGN / WEB DEVELOPMENT",
 
-    mindset: "НАШЕ БАЧЕННЯ",
-    manifestoLine1: "СТВОРЮЙ",
-    manifestoLine2: "ВАЖЛИВЕ.",
-    manifestoText: "Не слідувати шаблонам. Не боятися експериментів. Створювати те, що запам'ятовується.",
+    introTitle: "Не просто сайти. Цифровий характер.",
+    introText: "QRENNT — простір, де ідеї перетворюються на сучасні цифрові проєкти. Я приділяю увагу деталям, атмосфері, зручності та візуальній подачі.",
+    aboutMore: "Детальніше про мене",
 
-    idea: "МАЄШ ІДЕЮ?",
-    contactLine1: "ДАВАЙТЕ ЗРОБИМО",
-    contactLine2: "ЦЕ РЕАЛЬНІСТЮ.",
-    startProject: "Почати проєкт"
+    featuredTitle: "Обрані роботи.",
+    featuredCar: "Автомобільний цифровий досвід",
+    featuredAuto: "Сучасний автомобільний сервіс",
+    featuredBarber: "Стиль і цифрова презентація",
+    featuredCyber: "Футуристичний інтерактивний дизайн",
+
+    manifestoTitle: "Великі ідеї починаються з деталей.",
+    manifestoText: "Кожен елемент має значення. Кожен екран створює враження. Кожен проєкт має відрізнятися.",
+
+    servicesTitle: "Від ідеї до результату.",
+    serviceOne: "Розробка сайтів",
+    serviceOneText: "Сучасні сайти з індивідуальним дизайном.",
+    serviceTwo: "Вебдизайн",
+    serviceTwoText: "Продумана візуальна система та інтерфейси.",
+    serviceThree: "Анімації",
+    serviceThreeText: "Інтерактивність і рух у деталях.",
+    allServices: "Усі послуги",
+
+    contactTitle: "Є ідея? Створімо її разом.",
+    contactText: "Розкажи про свою задумку — обговоримо твій проєкт.",
+    contactButton: "Написати в Telegram",
+
+    rights: "Усі права захищені."
   }
 };
 
@@ -137,11 +161,20 @@ function setLanguage(language) {
     const key = element.dataset.i18n;
 
     if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
-      element.textContent = dictionary[key];
+      // Меняем текст, сохраняя вложенные иконки и HTML-разметку.
+      const textNode = Array.from(element.childNodes).find(
+        node => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
+      );
+
+      if (textNode) {
+        textNode.textContent = dictionary[key];
+      } else if (!element.children.length) {
+        element.textContent = dictionary[key];
+      }
     }
   });
 
-  document.querySelectorAll(".language-switcher button").forEach(button => {
+  document.querySelectorAll(".language-switch button").forEach(button => {
     const isActive = button.dataset.lang === language;
 
     button.classList.toggle("active", isActive);
@@ -151,11 +184,11 @@ function setLanguage(language) {
   try {
     localStorage.setItem("qrennt-language", language);
   } catch (error) {
-    // Language switching still works without local storage.
+    // Работа без localStorage.
   }
 }
 
-document.querySelectorAll(".language-switcher button").forEach(button => {
+document.querySelectorAll(".language-switch button").forEach(button => {
   button.addEventListener("click", () => {
     setLanguage(button.dataset.lang);
   });
@@ -180,7 +213,7 @@ setLanguage(initialLanguage);
 // =====================================
 
 const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("nav");
+const nav = document.getElementById("mainNav");
 
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
@@ -229,13 +262,9 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
     rootMargin: "0px 0px -35px 0px"
   });
 
-  revealElements.forEach(element => {
-    revealObserver.observe(element);
-  });
+  revealElements.forEach(element => revealObserver.observe(element));
 } else {
-  revealElements.forEach(element => {
-    element.classList.add("visible");
-  });
+  revealElements.forEach(element => element.classList.add("visible"));
 }
 
 // =====================================
@@ -250,10 +279,7 @@ if (canvas && ctx && !prefersReducedMotion) {
   let height = 0;
   let particles = [];
 
-  const pointer = {
-    x: -1000,
-    y: -1000
-  };
+  const pointer = { x: -1000, y: -1000 };
 
   function resizeCanvas() {
     const ratio = Math.min(window.devicePixelRatio || 1, 2);
@@ -269,10 +295,7 @@ if (canvas && ctx && !prefersReducedMotion) {
 
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
 
-    const count = Math.min(
-      85,
-      Math.max(25, Math.floor(width / 15))
-    );
+    const count = Math.min(85, Math.max(25, Math.floor(width / 15)));
 
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * width,
@@ -309,14 +332,7 @@ if (canvas && ctx && !prefersReducedMotion) {
       }
 
       ctx.beginPath();
-      ctx.arc(
-        particle.x,
-        particle.y,
-        particle.radius,
-        0,
-        Math.PI * 2
-      );
-
+      ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(125, 240, 165, ${particle.alpha})`;
       ctx.fill();
     });
@@ -328,7 +344,6 @@ if (canvas && ctx && !prefersReducedMotion) {
 
   window.addEventListener("pointermove", event => {
     if (event.pointerType === "touch") return;
-
     pointer.x = event.clientX;
     pointer.y = event.clientY;
   }, { passive: true });
@@ -379,11 +394,6 @@ if (orbCore && !prefersReducedMotion) {
 // =====================================
 
 document.querySelectorAll(".project-row").forEach(row => {
-  row.addEventListener("pointerenter", () => {
-    row.classList.add("hovered");
-  });
-
-  row.addEventListener("pointerleave", () => {
-    row.classList.remove("hovered");
-  });
+  row.addEventListener("pointerenter", () => row.classList.add("hovered"));
+  row.addEventListener("pointerleave", () => row.classList.remove("hovered"));
 });
