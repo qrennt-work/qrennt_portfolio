@@ -1,47 +1,54 @@
-
 "use strict";
 
-// =====================================
-// QRENNT — MULTILANGUAGE
-// RU / EN / UA
-// =====================================
+/* =========================================
+   QRENNT — MAIN SCRIPT
+========================================= */
 
 const translations = {
   ru: {
     navProjects: "Проекты",
-    navAbout: "О нас",
+    navAbout: "Обо мне",
     navServices: "Услуги",
     navReviews: "Отзывы",
-    navContact: "Связаться",
+    navContact: "Контакты",
 
-    eyebrow: "НЕЗАВИСИМАЯ DIGITAL-СТУДИЯ",
-    heroLine1: "WE CREATE",
-    heroLine2: "DIGITAL WORLDS",
-    heroDescription: "Создаём сайты, визуальные системы и цифровые впечатления, которые невозможно спутать с другими.",
-    explore: "Исследовать проекты",
+    eyebrow: "DIGITAL DESIGNER & DEVELOPER",
+
+    heroLine1: "Создаю цифровые",
+    heroLine2: "пространства.",
+
+    heroDescription:
+      "Дизайн, код и идеи, превращённые в цифровые проекты с характером.",
+
+    explore: "Исследовать",
     discuss: "Обсудить проект",
-    scroll: "ЛИСТАЙТЕ ВНИЗ",
+    scroll: "SCROLL TO EXPLORE",
 
-    philosophy: "НАША ФИЛОСОФИЯ",
-    introLine1: "WE DON'T JUST",
-    introLine2: "BUILD WEBSITES.",
-    introText: "Мы превращаем идеи в выразительные цифровые пространства. Внимание к деталям, характерный стиль и технологии — основа каждого проекта.",
-    aboutMore: "Больше о QRENNT",
+    philosophy: "Моя философия",
 
-    portfolio: "ПОРТФОЛИО — 2026",
-    workLine1: "SELECTED",
-    workLine2: "PROJECTS.",
-    workDescription: "Каждый проект — отдельная история. Посмотри, что мы создаём.",
+    introLine1: "Дизайн — это",
+    introLine2: "не просто визуал.",
+    introText:
+      "Это эмоция, взаимодействие и ощущение, которое остаётся после знакомства с продуктом.",
+    aboutMore: "Подробнее обо мне",
+
+    portfolio: "Избранные проекты",
+    workLine1: "Работы, в которых",
+    workLine2: "есть идея.",
+    workDescription:
+      "Каждый проект — отдельная история, эксперимент и возможность создать нечто уникальное.",
     allProjects: "Смотреть все проекты",
 
-    mindset: "НАШЕ МЫШЛЕНИЕ",
-    manifestoLine1: "MAKE IT",
-    manifestoLine2: "MATTER.",
-    manifestoText: "Не следовать шаблонам. Не бояться экспериментов. Создавать то, что запоминается.",
+    mindset: "Мой подход",
 
-    idea: "ЕСТЬ ИДЕЯ?",
-    contactLine1: "LET'S MAKE",
-    contactLine2: "IT REAL.",
+    manifestoLine1: "Меньше шаблонов.",
+    manifestoLine2: "Больше характера.",
+    manifestoText:
+      "Я стремлюсь создавать цифровые решения, которые не просто работают, а формируют впечатление.",
+
+    idea: "Есть идея?",
+    contactLine1: "Давай создадим",
+    contactLine2: "что-то особенное.",
     startProject: "Начать проект"
   },
 
@@ -52,163 +59,217 @@ const translations = {
     navReviews: "Reviews",
     navContact: "Contact",
 
-    eyebrow: "INDEPENDENT DIGITAL STUDIO",
-    heroLine1: "WE CREATE",
-    heroLine2: "DIGITAL WORLDS",
-    heroDescription: "We create websites, visual systems and digital experiences that stand apart.",
-    explore: "Explore projects",
+    eyebrow: "DIGITAL DESIGNER & DEVELOPER",
+
+    heroLine1: "Creating digital",
+    heroLine2: "spaces.",
+
+    heroDescription:
+      "Design, code and ideas transformed into digital projects with character.",
+
+    explore: "Explore",
     discuss: "Discuss a project",
     scroll: "SCROLL TO EXPLORE",
 
-    philosophy: "OUR PHILOSOPHY",
-    introLine1: "WE DON'T JUST",
-    introLine2: "BUILD WEBSITES.",
-    introText: "We turn ideas into expressive digital spaces. Attention to detail, distinctive style and technology are the foundation of every project.",
-    aboutMore: "More about QRENNT",
+    philosophy: "My philosophy",
 
-    portfolio: "PORTFOLIO — 2026",
-    workLine1: "SELECTED",
-    workLine2: "PROJECTS.",
-    workDescription: "Every project tells a different story. Discover what we create.",
+    introLine1: "Design is",
+    introLine2: "more than visuals.",
+    introText:
+      "It's emotion, interaction and the feeling that remains after experiencing a product.",
+    aboutMore: "More about me",
+
+    portfolio: "Selected projects",
+    workLine1: "Projects with",
+    workLine2: "a purpose.",
+    workDescription:
+      "Every project is a separate story, experiment and opportunity to create something unique.",
     allProjects: "View all projects",
 
-    mindset: "OUR MINDSET",
-    manifestoLine1: "MAKE IT",
-    manifestoLine2: "MATTER.",
-    manifestoText: "No templates. No fear of experimentation. Create something memorable.",
+    mindset: "My approach",
 
-    idea: "HAVE AN IDEA?",
-    contactLine1: "LET'S MAKE",
-    contactLine2: "IT REAL.",
+    manifestoLine1: "Less templates.",
+    manifestoLine2: "More character.",
+    manifestoText:
+      "I aim to create digital solutions that don't just work, but leave an impression.",
+
+    idea: "Have an idea?",
+    contactLine1: "Let's create",
+    contactLine2: "something special.",
     startProject: "Start a project"
   },
 
   ua: {
     navProjects: "Проєкти",
-    navAbout: "Про нас",
+    navAbout: "Про мене",
     navServices: "Послуги",
     navReviews: "Відгуки",
-    navContact: "Зв'язатися",
+    navContact: "Контакти",
 
-    eyebrow: "НЕЗАЛЕЖНА DIGITAL-СТУДІЯ",
-    heroLine1: "WE CREATE",
-    heroLine2: "DIGITAL WORLDS",
-    heroDescription: "Створюємо сайти, візуальні системи та цифрові враження, які неможливо сплутати з іншими.",
-    explore: "Переглянути проєкти",
+    eyebrow: "DIGITAL DESIGNER & DEVELOPER",
+
+    heroLine1: "Створюю цифрові",
+    heroLine2: "простори.",
+
+    heroDescription:
+      "Дизайн, код та ідеї, перетворені на цифрові проєкти з характером.",
+
+    explore: "Дослідити",
     discuss: "Обговорити проєкт",
-    scroll: "ГОТУЙСЯ ДО ПОДОРОЖІ",
+    scroll: "SCROLL TO EXPLORE",
 
-    philosophy: "НАША ФІЛОСОФІЯ",
-    introLine1: "WE DON'T JUST",
-    introLine2: "BUILD WEBSITES.",
-    introText: "Ми перетворюємо ідеї на виразні цифрові простори. Увага до деталей, особливий стиль і технології — основа кожного проєкту.",
-    aboutMore: "Більше про QRENNT",
+    philosophy: "Моя філософія",
 
-    portfolio: "ПОРТФОЛІО — 2026",
-    workLine1: "ОБРАНІ",
-    workLine2: "ПРОЄКТИ.",
-    workDescription: "Кожен проєкт — окрема історія. Подивись, що ми створюємо.",
+    introLine1: "Дизайн — це",
+    introLine2: "не просто візуал.",
+    introText:
+      "Це емоція, взаємодія та відчуття, яке залишається після знайомства з продуктом.",
+    aboutMore: "Детальніше про мене",
+
+    portfolio: "Обрані проєкти",
+    workLine1: "Роботи, у яких",
+    workLine2: "є ідея.",
+    workDescription:
+      "Кожен проєкт — окрема історія, експеримент і можливість створити щось унікальне.",
     allProjects: "Переглянути всі проєкти",
 
-    mindset: "НАШЕ БАЧЕННЯ",
-    manifestoLine1: "СТВОРЮЙ",
-    manifestoLine2: "ВАЖЛИВЕ.",
-    manifestoText: "Не слідувати шаблонам. Не боятися експериментів. Створювати те, що запам'ятовується.",
+    mindset: "Мій підхід",
 
-    idea: "МАЄШ ІДЕЮ?",
-    contactLine1: "ДАВАЙТЕ ЗРОБИМО",
-    contactLine2: "ЦЕ РЕАЛЬНІСТЮ.",
+    manifestoLine1: "Менше шаблонів.",
+    manifestoLine2: "Більше характеру.",
+    manifestoText:
+      "Я прагну створювати цифрові рішення, які не просто працюють, а формують враження.",
+
+    idea: "Є ідея?",
+    contactLine1: "Давай створимо",
+    contactLine2: "щось особливе.",
     startProject: "Почати проєкт"
   }
 };
 
-// =====================================
-// LANGUAGE FUNCTIONS
-// =====================================
+
+/* =========================================
+   LANGUAGE SWITCHER
+========================================= */
 
 function setLanguage(language) {
   if (!translations[language]) return;
 
-  const dictionary = translations[language];
-
   document.documentElement.lang = language;
 
-  document.querySelectorAll("[data-i18n]").forEach(element => {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
 
-    if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
-      element.textContent = dictionary[key];
+    if (translations[language][key] !== undefined) {
+      element.textContent = translations[language][key];
     }
   });
 
-  document.querySelectorAll(".language-switcher button").forEach(button => {
-    const isActive = button.dataset.lang === language;
+  const languageButtons = document.querySelectorAll(
+    ".language-switcher button, .language-switch button, .language-switch [data-lang]"
+  );
+
+  languageButtons.forEach((button) => {
+    const buttonLanguage =
+      button.dataset.lang ||
+      button.getAttribute("data-language");
+
+    const isActive = buttonLanguage === language;
 
     button.classList.toggle("active", isActive);
+
     button.setAttribute("aria-pressed", String(isActive));
   });
 
   try {
     localStorage.setItem("qrennt-language", language);
   } catch (error) {
-    // Language switching still works without local storage.
+    // Storage may be unavailable.
   }
 }
 
-document.querySelectorAll(".language-switcher button").forEach(button => {
+
+/* =========================================
+   LANGUAGE BUTTON EVENTS
+========================================= */
+
+const languageButtons = document.querySelectorAll(
+  ".language-switcher button, .language-switch button, .language-switch [data-lang]"
+);
+
+languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    setLanguage(button.dataset.lang);
+    const language =
+      button.dataset.lang ||
+      button.getAttribute("data-language");
+
+    if (language) {
+      setLanguage(language);
+    }
   });
 });
 
-let initialLanguage = "ru";
+
+/* =========================================
+   INITIAL LANGUAGE
+========================================= */
+
+let savedLanguage = "ru";
 
 try {
-  const savedLanguage = localStorage.getItem("qrennt-language");
-
-  if (savedLanguage && translations[savedLanguage]) {
-    initialLanguage = savedLanguage;
-  }
+  savedLanguage = localStorage.getItem("qrennt-language") || "ru";
 } catch (error) {
-  initialLanguage = "ru";
+  savedLanguage = "ru";
 }
 
-setLanguage(initialLanguage);
+if (!translations[savedLanguage]) {
+  savedLanguage = "ru";
+}
 
-// =====================================
-// MOBILE MENU
-// =====================================
+setLanguage(savedLanguage);
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
 
 const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("nav");
+
+const nav =
+  document.getElementById("nav") ||
+  document.getElementById("mainNav");
 
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("open");
+
     menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  nav.querySelectorAll("a").forEach(link => {
+  nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("open");
+
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
 
-  document.addEventListener("click", event => {
+  document.addEventListener("click", (event) => {
     if (
       !nav.contains(event.target) &&
       !menuToggle.contains(event.target)
     ) {
       nav.classList.remove("open");
+
       menuToggle.setAttribute("aria-expanded", "false");
     }
   });
 }
 
-// =====================================
-// REVEAL ON SCROLL
-// =====================================
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
 
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -216,157 +277,227 @@ const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
-if ("IntersectionObserver" in window && !prefersReducedMotion) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -35px 0px"
+if (prefersReducedMotion) {
+  revealElements.forEach((element) => {
+    element.classList.add("visible");
   });
+} else if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
 
-  revealElements.forEach(element => {
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
+
+  revealElements.forEach((element) => {
     revealObserver.observe(element);
   });
 } else {
-  revealElements.forEach(element => {
+  revealElements.forEach((element) => {
     element.classList.add("visible");
   });
 }
 
-// =====================================
-// PARTICLE FIELD
-// =====================================
+
+/* =========================================
+   PARTICLES
+========================================= */
 
 const canvas = document.getElementById("particles");
-const ctx = canvas?.getContext("2d");
 
-if (canvas && ctx && !prefersReducedMotion) {
-  let width = 0;
-  let height = 0;
-  let particles = [];
+if (canvas && !prefersReducedMotion) {
+  const ctx = canvas.getContext("2d");
 
-  const pointer = {
-    x: -1000,
-    y: -1000
-  };
+  if (ctx) {
+    let particles = [];
 
-  function resizeCanvas() {
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    let width = 0;
+    let height = 0;
 
-    width = window.innerWidth;
-    height = window.innerHeight;
+    let mouse = {
+      x: null,
+      y: null
+    };
 
-    canvas.width = width * ratio;
-    canvas.height = height * ratio;
+    const maxParticles = 85;
 
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
+    function resizeCanvas() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      width = window.innerWidth;
+      height = window.innerHeight;
 
-    const count = Math.min(
-      85,
-      Math.max(25, Math.floor(width / 15))
-    );
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
 
-    particles = Array.from({ length: count }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      radius: Math.random() * 1.5 + 0.4,
-      speed: Math.random() * 0.35 + 0.08,
-      drift: (Math.random() - 0.5) * 0.25,
-      alpha: Math.random() * 0.5 + 0.15
-    }));
-  }
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
 
-  function drawParticles() {
-    ctx.clearRect(0, 0, width, height);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    particles.forEach(particle => {
-      particle.y -= particle.speed;
-      particle.x += particle.drift;
+      createParticles();
+    }
 
-      if (particle.y < -5) {
-        particle.y = height + 5;
-        particle.x = Math.random() * width;
-      }
+    function createParticles() {
+      particles = [];
 
-      if (particle.x < -5) particle.x = width + 5;
-      if (particle.x > width + 5) particle.x = -5;
-
-      const dx = pointer.x - particle.x;
-      const dy = pointer.y - particle.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < 110 && distance > 0) {
-        particle.x -= (dx / distance) * 0.35;
-        particle.y -= (dy / distance) * 0.35;
-      }
-
-      ctx.beginPath();
-      ctx.arc(
-        particle.x,
-        particle.y,
-        particle.radius,
-        0,
-        Math.PI * 2
+      const count = Math.min(
+        maxParticles,
+        Math.floor((width * height) / 15000)
       );
 
-      ctx.fillStyle = `rgba(125, 240, 165, ${particle.alpha})`;
-      ctx.fill();
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+
+          size: Math.random() * 1.5 + 0.4,
+
+          speedX: (Math.random() - 0.5) * 0.25,
+          speedY: (Math.random() - 0.5) * 0.25,
+
+          opacity: Math.random() * 0.5 + 0.15
+        });
+      }
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach((particle) => {
+        particle.x += particle.speedX;
+        particle.y += particle.speedY;
+
+        if (particle.x < 0) particle.x = width;
+        if (particle.x > width) particle.x = 0;
+
+        if (particle.y < 0) particle.y = height;
+        if (particle.y > height) particle.y = 0;
+
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = particle.x - mouse.x;
+          const dy = particle.y - mouse.y;
+
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100 && distance > 0) {
+            const force = (100 - distance) / 100;
+
+            particle.x += (dx / distance) * force * 0.6;
+            particle.y += (dy / distance) * force * 0.6;
+          }
+        }
+
+        ctx.beginPath();
+
+        ctx.arc(
+          particle.x,
+          particle.y,
+          particle.size,
+          0,
+          Math.PI * 2
+        );
+
+        ctx.fillStyle = `rgba(112,230,160,${particle.opacity})`;
+
+        ctx.fill();
+      });
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            const opacity = (1 - distance / 100) * 0.12;
+
+            ctx.beginPath();
+
+            ctx.moveTo(particles[i].x, particles[i].y);
+
+            ctx.lineTo(particles[j].x, particles[j].y);
+
+            ctx.strokeStyle = `rgba(112,230,160,${opacity})`;
+
+            ctx.lineWidth = 0.5;
+
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(drawParticles);
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+
+    window.addEventListener("mousemove", (event) => {
+      mouse.x = event.clientX;
+      mouse.y = event.clientY;
     });
 
-    requestAnimationFrame(drawParticles);
+    window.addEventListener("mouseleave", () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    window.addEventListener("touchstart", () => {
+      mouse.x = null;
+      mouse.y = null;
+    }, { passive: true });
+
+    resizeCanvas();
+
+    drawParticles();
   }
-
-  window.addEventListener("resize", resizeCanvas);
-
-  window.addEventListener("pointermove", event => {
-    if (event.pointerType === "touch") return;
-
-    pointer.x = event.clientX;
-    pointer.y = event.clientY;
-  }, { passive: true });
-
-  window.addEventListener("pointerleave", () => {
-    pointer.x = -1000;
-    pointer.y = -1000;
-  });
-
-  resizeCanvas();
-  drawParticles();
 }
 
-// =====================================
-// INTERACTIVE ORB
-// =====================================
 
-const orbCore = document.querySelector(".orb-core");
+/* =========================================
+   ORB INTERACTION
+========================================= */
 
-if (orbCore && !prefersReducedMotion) {
+const orb = document.querySelector(".orb-core");
+
+if (orb && !prefersReducedMotion) {
   let targetX = 0;
   let targetY = 0;
+
   let currentX = 0;
   let currentY = 0;
 
-  window.addEventListener("pointermove", event => {
-    if (event.pointerType === "touch") return;
+  orb.addEventListener("mousemove", (event) => {
+    const rect = orb.getBoundingClientRect();
 
-    targetY = ((event.clientX / window.innerWidth) - 0.5) * 22;
-    targetX = ((event.clientY / window.innerHeight) - 0.5) * -22;
-  }, { passive: true });
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    targetX = (event.clientX - centerX) / rect.width;
+    targetY = (event.clientY - centerY) / rect.height;
+  });
+
+  orb.addEventListener("mouseleave", () => {
+    targetX = 0;
+    targetY = 0;
+  });
 
   function animateOrb() {
-    currentX += (targetX - currentX) * 0.045;
-    currentY += (targetY - currentY) * 0.045;
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
 
-    orbCore.style.transform =
-      `perspective(700px) rotateX(${currentX}deg) rotateY(${currentY}deg)`;
+    orb.style.transform =
+      `translate3d(${currentX * 18}px, ${currentY * 18}px, 0)`;
 
     requestAnimationFrame(animateOrb);
   }
@@ -374,16 +505,55 @@ if (orbCore && !prefersReducedMotion) {
   animateOrb();
 }
 
-// =====================================
-// PROJECT ROW INTERACTION
-// =====================================
 
-document.querySelectorAll(".project-row").forEach(row => {
-  row.addEventListener("pointerenter", () => {
+/* =========================================
+   PROJECT HOVER EFFECT
+========================================= */
+
+document.querySelectorAll(".project-row").forEach((row) => {
+  row.addEventListener("mouseenter", () => {
     row.classList.add("hovered");
   });
 
-  row.addEventListener("pointerleave", () => {
+  row.addEventListener("mouseleave", () => {
     row.classList.remove("hovered");
   });
 });
+
+
+/* =========================================
+   SMOOTH ANCHOR SCROLL
+========================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+
+    if (!targetId || targetId === "#") return;
+
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
+    event.preventDefault();
+
+    target.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start"
+    });
+  });
+});
+
+
+/* =========================================
+   YEAR
+========================================= */
+
+document.querySelectorAll("[data-current-year]").forEach((element) => {
+  element.textContent = new Date().getFullYear();
+});
+
+
+/* =========================================
+   QRENNT — END
+========================================= */
