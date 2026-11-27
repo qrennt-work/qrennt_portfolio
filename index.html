@@ -19,79 +19,117 @@
 
 <body>
 
+  <canvas id="particles"></canvas>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
   <!-- HEADER -->
-  <header class="header">
-    <div class="container header-inner">
 
-      <a href="index.html" class="logo">QRENNT<span>.</span></a>
+  <header class="site-header">
 
-      <button class="menu-toggle" aria-label="Открыть меню">
-        <span></span>
-        <span></span>
-      </button>
+    <a href="index.html" class="logo">
+      QRENNT<span>.</span>
+    </a>
 
-      <nav class="nav">
-        <a href="#home">Главная</a>
-        <a href="#projects">Проекты</a>
-        <a href="about.html">Обо мне</a>
-        <a href="services.html">Услуги</a>
-        <a href="reviews.html">Отзывы</a>
-        <a href="contact.html">Контакты</a>
-      </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+    </button>
 
-      <div class="header-right">
-        <div class="language-switch">
-          <span>RU</span>
-        </div>
-        <a href="https://t.me/qrennt_workich" class="header-contact">
-          Связаться
-        </a>
+    <nav class="nav" id="mainNav">
+      <a href="index.html" class="active" data-i18n="navHome">Главная</a>
+      <a href="projects.html" data-i18n="navProjects">Проекты</a>
+      <a href="about.html" data-i18n="navAbout">Обо мне</a>
+      <a href="services.html" data-i18n="navServices">Услуги</a>
+      <a href="reviews.html" data-i18n="navReviews">Отзывы</a>
+    </nav>
+
+    <div class="header-right">
+
+      <div class="language-switch">
+        <button class="lang active" data-lang="ru">RU</button>
+        <button class="lang" data-lang="en">EN</button>
+        <button class="lang" data-lang="ua">UA</button>
       </div>
 
+      <a
+        href="https://t.me/qrennt_workich"
+        target="_blank"
+        rel="noopener"
+        class="header-contact"
+        data-i18n="contact"
+      >
+        Связаться ↗
+      </a>
+
     </div>
+
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
 
-    <div class="container hero-inner">
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
 
       <div class="hero-content">
 
-        <div class="hero-label">
+        <div class="hero-topline">
           <span class="status-dot"></span>
-          DIGITAL DESIGN & DEVELOPMENT
+          <span data-i18n="eyebrow">INDEPENDENT DIGITAL CREATOR</span>
+          <span class="hero-year">2026</span>
         </div>
 
         <h1>
-          Создаю сайты,<br>
-          которые <span>запоминаются</span>
+          <span data-i18n="heroLine1">Создаю сайты,</span>
+          <br>
+          <span class="gradient-text" data-i18n="heroLine2">
+            которые запоминаются.
+          </span>
         </h1>
 
-        <p class="hero-description">
-          Дизайн, разработка и цифровые решения,
-          которые превращают идеи в впечатления.
+        <p class="hero-description" data-i18n="heroDescription">
+          Разрабатываю современные цифровые пространства,
+          соединяя дизайн, технологии и визуальную эстетику.
         </p>
 
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            Смотреть проекты
+        <div class="hero-project-action">
+
+          <a href="projects.html" class="all-projects-button">
+
+            <span class="button-icon">✳</span>
+
+            <span class="button-text">
+              <strong data-i18n="allProjects">
+                Смотреть все проекты
+              </strong>
+
+              <small data-i18n="projectsSubtitle">
+                Мои работы и цифровые эксперименты
+              </small>
+            </span>
+
+            <span class="button-arrow">↗</span>
+
           </a>
 
-          <a href="contact.html" class="btn btn-secondary">
-            Обсудить проект
-          </a>
+          <span class="button-hint" data-i18n="clickToExplore">
+            ОТКРЫТЬ КОЛЛЕКЦИЮ
+          </span>
+
         </div>
 
-        <div class="hero-meta">
-          <span>WEB DESIGN</span>
-          <span>DEVELOPMENT</span>
-          <span>CREATIVE</span>
+        <div class="hero-bottom-info">
+          <span data-i18n="location">DIGITAL DESIGN / WEB DEVELOPMENT</span>
+          <span>SCROLL TO EXPLORE ↓</span>
         </div>
 
       </div>
 
-      <!-- ORIGINAL EMERALD OBJECT -->
+
+      <!-- EMERALD OBJECT -->
 
       <div class="hero-visual">
 
@@ -110,591 +148,588 @@
 
         </div>
 
-        <span class="floating-word floating-one">DESIGN</span>
-        <span class="floating-word floating-two">CREATIVE</span>
-        <span class="floating-word floating-three">DIGITAL</span>
+        <span class="floating-word floating-one">CREATIVE</span>
+        <span class="floating-word floating-two">DIGITAL</span>
+        <span class="floating-word floating-three">FUTURE</span>
         <span class="floating-word floating-four">QRENNT</span>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
 
-  <!-- MARQUEE -->
+    <!-- MARQUEE -->
 
-  <section class="marquee">
-    <div class="marquee-track">
-      <span>WEB DESIGN</span>
-      <span>✳</span>
-      <span>DEVELOPMENT</span>
-      <span>✳</span>
-      <span>DIGITAL EXPERIENCES</span>
-      <span>✳</span>
-      <span>WEB DESIGN</span>
-      <span>✳</span>
-      <span>DEVELOPMENT</span>
-      <span>✳</span>
-      <span>DIGITAL EXPERIENCES</span>
-      <span>✳</span>
-    </div>
-  </section>
+    <section class="marquee-section">
 
-  <!-- INTRO -->
+      <div class="marquee-track">
+        <span>DESIGN</span>
+        <i>✳</i>
+        <span>DEVELOPMENT</span>
+        <i>✳</i>
+        <span>DIGITAL EXPERIENCE</span>
+        <i>✳</i>
+        <span>CREATIVITY</span>
+        <i>✳</i>
+        <span>DESIGN</span>
+        <i>✳</i>
+        <span>DEVELOPMENT</span>
+        <i>✳</i>
+      </div>
 
-  <section class="intro section" id="intro">
+    </section>
 
-    <div class="container">
+
+    <!-- INTRO -->
+
+    <section class="intro-section reveal">
 
       <div class="section-label">
-        <span>01 / INTRODUCTION</span>
+        <span>01 / ABOUT QRENNT</span>
+        <span>THE CREATIVE PROCESS</span>
       </div>
 
-      <div class="intro-content">
+      <div class="intro-grid">
 
-        <h2>
-          Цифровые проекты<br>
-          с <span>характером.</span>
+        <h2 data-i18n="introTitle">
+          Не просто сайты.
+          <span class="gradient-text">Цифровой характер.</span>
         </h2>
 
-        <p>
-          QRENNT — пространство, где дизайн встречается
-          с технологией. Создаю сайты, которые не просто
-          работают, а формируют впечатление, передают
-          атмосферу и выделяют бренд.
-        </p>
+        <div class="intro-text">
+          <p data-i18n="introText">
+            QRENNT — пространство, где идеи превращаются
+            в современные цифровые проекты. Я уделяю внимание
+            деталям, атмосфере, удобству и визуальной подаче.
+          </p>
 
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-
-  <section class="projects-section section" id="projects">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <div>
-          <div class="section-label">
-            <span>02 / SELECTED WORKS</span>
-          </div>
-
-          <h2>Избранные <span>проекты</span></h2>
+          <a href="about.html" class="text-link">
+            <span data-i18n="aboutMore">Подробнее обо мне</span>
+            <span>↗</span>
+          </a>
         </div>
 
-        <a href="projects.html" class="text-link">
-          Все проекты ↗
-        </a>
-
       </div>
 
-      <div class="projects-grid">
+    </section>
 
-        <!-- BLACK PANAMERA -->
 
-        <a href="projects/3d-car-site/index.html"
-           class="project-card project-card-large">
+    <!-- SELECTED PROJECTS -->
 
-          <div class="project-visual featured-car">
+    <section class="featured-section" id="featured">
 
+      <div class="section-label">
+        <span>02 / SELECTED WORKS</span>
+        <span>2026</span>
+      </div>
+
+      <div class="featured-heading">
+        <h2 data-i18n="featuredTitle">
+          Избранные <span class="gradient-text">работы.</span>
+        </h2>
+
+        <a href="projects.html" class="view-all-link">
+          <span data-i18n="allProjects">Смотреть все проекты</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+
+      <div class="featured-grid">
+
+        <a href="projects/3d-car-site/index.html" class="featured-card reveal">
+          <div class="featured-image featured-car">
+            <span class="featured-number">01 / 07</span>
             <div class="mini-car">
-
               <div class="mini-car-window"></div>
               <div class="mini-car-body"></div>
               <div class="mini-wheel"></div>
-              <div class="second-wheel"></div>
-
+              <div class="mini-wheel second-wheel"></div>
             </div>
-
-            <div class="project-visual-label">
-              AUTOMOTIVE EXPERIENCE
-            </div>
-
+            <span class="featured-category">AUTOMOTIVE</span>
           </div>
 
-          <div class="project-info">
-
+          <div class="featured-info">
             <div>
               <h3>BLACK PANAMERA</h3>
-              <p>Автомобильный веб-экспириенс</p>
+              <p data-i18n="featuredCar">Автомобильный цифровой опыт</p>
             </div>
-
-            <span class="project-arrow">↗</span>
-
+            <span class="featured-arrow">↗</span>
           </div>
-
         </a>
 
-        <!-- AUTO LINE LAB -->
 
-        <a href="projects/AUTO-LINE-LAB/index.html"
-           class="project-card">
-
-          <div class="project-visual visual-auto">
-
-            <div class="auto-visual-content">
-              <span class="auto-small">AUTOMOTIVE</span>
-              <span class="auto-big">AUTO<br>LINE</span>
-              <span class="auto-bottom">LAB / 01</span>
+        <a href="projects/AUTO-LINE-LAB/index.html" class="featured-card reveal">
+          <div class="featured-image featured-auto">
+            <span class="featured-number">02 / 07</span>
+            <div class="auto-art">
+              <span>AUTO</span>
+              <strong>LINE</strong>
+              <i>LAB</i>
             </div>
-
+            <span class="featured-category">AUTO SERVICE</span>
           </div>
 
-          <div class="project-info">
-
+          <div class="featured-info">
             <div>
               <h3>AUTO LINE LAB</h3>
-              <p>Автомобильный дизайн</p>
+              <p data-i18n="featuredAuto">Современный автомобильный сервис</p>
             </div>
-
-            <span class="project-arrow">↗</span>
-
+            <span class="featured-arrow">↗</span>
           </div>
-
         </a>
 
-        <!-- BARBERSHOP -->
 
-        <a href="projects/БАРБЕРШОП/index.html"
-           class="project-card">
-
-          <div class="project-visual visual-barber">
-
-            <div class="barber-visual-content">
-              <span class="barber-small">EST. 2025</span>
-              <span class="barber-big">KLINE</span>
-              <span class="barber-bottom">BARBERSHOP</span>
-            </div>
-
+        <a href="projects/БАРБЕРШОП/index.html" class="featured-card reveal">
+          <div class="featured-image featured-barber">
+            <span class="featured-number">03 / 07</span>
+            <div class="barber-art">K<span>.</span></div>
+            <span class="featured-category">BARBERSHOP</span>
           </div>
 
-          <div class="project-info">
-
+          <div class="featured-info">
             <div>
               <h3>KLINE BARBERSHOP</h3>
-              <p>Сайт барбершопа</p>
+              <p data-i18n="featuredBarber">Стиль и цифровая презентация</p>
             </div>
-
-            <span class="project-arrow">↗</span>
-
+            <span class="featured-arrow">↗</span>
           </div>
-
         </a>
 
-        <!-- NEON CYBER CARD -->
 
-        <a href="projects/neon-cyber-card/index.html"
-           class="project-card">
-
-          <div class="project-visual visual-cyber">
-
-            <div class="cyber-visual-content">
-              <span class="cyber-small">DIGITAL IDENTITY</span>
-              <span class="cyber-big">CYBER</span>
-              <span class="cyber-bottom">NEON CARD</span>
+        <a href="projects/neon-cyber-card/index.html" class="featured-card reveal">
+          <div class="featured-image featured-cyber">
+            <span class="featured-number">05 / 07</span>
+            <div class="cyber-art">
+              <small>QRENNT / DIGITAL</small>
+              <strong>NEON<br>CYBER</strong>
             </div>
-
+            <span class="featured-category">INTERACTIVE</span>
           </div>
 
-          <div class="project-info">
-
+          <div class="featured-info">
             <div>
               <h3>NEON CYBER CARD</h3>
-              <p>Интерактивная цифровая карточка</p>
+              <p data-i18n="featuredCyber">Футуристичный интерактивный дизайн</p>
             </div>
-
-            <span class="project-arrow">↗</span>
-
+            <span class="featured-arrow">↗</span>
           </div>
-
         </a>
 
       </div>
 
-      <div class="projects-bottom">
-        <a href="projects.html" class="btn btn-secondary">
-          Смотреть все проекты
-        </a>
-      </div>
 
-    </div>
+      <a href="projects.html" class="all-projects-bottom">
+        <span class="bottom-button-icon">✳</span>
+        <span data-i18n="allProjects">Смотреть все проекты</span>
+        <span class="bottom-button-arrow">↗</span>
+      </a>
 
-  </section>
+    </section>
 
-  <!-- MANIFESTO -->
 
-  <section class="manifesto section">
+    <!-- MANIFESTO -->
 
-    <div class="container">
+    <section class="manifesto-section reveal">
+
+      <div class="manifesto-orb"></div>
+
+      <span class="section-label">03 / OUR PHILOSOPHY</span>
+
+      <h2 data-i18n="manifestoTitle">
+        Большие идеи начинаются
+        <span class="gradient-text">с деталей.</span>
+      </h2>
+
+      <p data-i18n="manifestoText">
+        Каждый элемент должен иметь смысл.
+        Каждый экран должен создавать впечатление.
+        Каждый проект должен отличаться.
+      </p>
+
+    </section>
+
+
+    <!-- ABOUT ME -->
+
+    <section class="about-me-section reveal" id="about">
 
       <div class="section-label">
-        <span>03 / MANIFESTO</span>
+        <span>04 / ABOUT THE CREATOR</span>
+        <span>BEHIND QRENNT</span>
       </div>
 
-      <div class="manifesto-content">
+      <div class="about-me-grid">
 
-        <p class="manifesto-text">
-          Хороший сайт — это не просто набор блоков.
-          Это <span>атмосфера</span>, ощущение и
-          <span>внимание к деталям.</span>
-        </p>
+        <div class="about-me-visual">
+          <div class="about-orbit orbit-one"></div>
+          <div class="about-orbit orbit-two"></div>
 
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-
-  <section class="about-preview section" id="about">
-
-    <div class="container about-grid">
-
-      <div class="about-left">
-
-        <div class="section-label">
-          <span>04 / ABOUT</span>
-        </div>
-
-        <h2>
-          За проектами<br>
-          стоит <span>человек.</span>
-        </h2>
-
-      </div>
-
-      <div class="about-right">
-
-        <p>
-          Я создаю цифровые проекты, экспериментирую
-          с визуальными решениями и превращаю идеи
-          в современные сайты.
-        </p>
-
-        <p>
-          Для меня важны не только функциональность,
-          но и эстетика, детали и ощущение,
-          которое остаётся у человека после просмотра.
-        </p>
-
-        <a href="about.html" class="text-link">
-          Подробнее обо мне ↗
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SERVICES -->
-
-  <section class="services-preview section" id="services">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <div>
-          <div class="section-label">
-            <span>05 / SERVICES</span>
+          <div class="about-monogram">
+            <span>Q</span>
+            <i>QRENNT</i>
           </div>
 
-          <h2>Что я <span>делаю</span></h2>
+          <span class="about-visual-caption">INDEPENDENT DIGITAL CREATOR</span>
         </div>
 
-        <a href="services.html" class="text-link">
-          Все услуги ↗
-        </a>
+        <div class="about-me-content">
 
-      </div>
+          <span class="about-kicker">HELLO, I'M QRENNT</span>
 
-      <div class="services-grid">
-
-        <div class="service-card">
-
-          <span class="service-number">01</span>
-
-          <h3>Web Design</h3>
+          <h2>
+            Создаю цифровые
+            <span class="gradient-text">впечатления.</span>
+          </h2>
 
           <p>
-            Современный визуальный дизайн,
-            композиция и интерфейсы.
+            Я — независимый digital creator, которому нравится
+            превращать идеи в необычные цифровые проекты.
+            Для меня сайт — это не просто набор страниц,
+            а сочетание визуального стиля, технологий
+            и удобства использования.
           </p>
-
-        </div>
-
-        <div class="service-card">
-
-          <span class="service-number">02</span>
-
-          <h3>Development</h3>
 
           <p>
-            Разработка сайтов с адаптацией
-            под различные устройства.
+            В каждом проекте я экспериментирую с дизайном,
+            анимациями и интерактивностью, чтобы создавать
+            что-то действительно запоминающееся.
           </p>
 
-        </div>
-
-        <div class="service-card">
-
-          <span class="service-number">03</span>
-
-          <h3>Creative Projects</h3>
-
-          <p>
-            Экспериментальные решения,
-            анимации и интерактив.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PRICING -->
-
-  <section class="pricing-preview section" id="pricing">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <div>
-          <div class="section-label">
-            <span>06 / PRICING</span>
+          <div class="about-skills">
+            <span>WEB DEVELOPMENT</span>
+            <span>UI / UX DESIGN</span>
+            <span>CREATIVE DESIGN</span>
+            <span>ANIMATIONS</span>
           </div>
 
-          <h2>Стоимость <span>работы</span></h2>
+          <a href="about.html" class="text-link">
+            <span>Больше обо мне</span>
+            <span>↗</span>
+          </a>
+
         </div>
 
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES PREVIEW -->
+
+    <section class="services-preview reveal">
+
+      <div class="section-label">
+        <span>05 / WHAT I DO</span>
+        <span>CREATIVE SERVICES</span>
+      </div>
+
+      <h2 data-i18n="servicesTitle">
+        От идеи до <span class="gradient-text">результата.</span>
+      </h2>
+
+      <div class="service-mini-grid">
+
+        <div class="service-mini glass-panel">
+          <span class="service-icon">◈</span>
+          <h3 data-i18n="serviceOne">Разработка сайтов</h3>
+          <p data-i18n="serviceOneText">Современные сайты с индивидуальным дизайном.</p>
+          <span class="service-index">01</span>
+        </div>
+
+        <div class="service-mini glass-panel">
+          <span class="service-icon">✳</span>
+          <h3 data-i18n="serviceTwo">Веб-дизайн</h3>
+          <p data-i18n="serviceTwoText">Продуманная визуальная система и интерфейсы.</p>
+          <span class="service-index">02</span>
+        </div>
+
+        <div class="service-mini glass-panel">
+          <span class="service-icon">⌘</span>
+          <h3 data-i18n="serviceThree">Анимации</h3>
+          <p data-i18n="serviceThreeText">Интерактивность и движение в деталях.</p>
+          <span class="service-index">03</span>
+        </div>
+
+      </div>
+
+      <a href="services.html" class="text-link">
+        <span data-i18n="allServices">Все услуги</span>
+        <span>↗</span>
+      </a>
+
+    </section>
+
+
+    <!-- PRICING -->
+
+    <section class="pricing-section reveal" id="pricing">
+
+      <div class="section-label">
+        <span>06 / INVESTMENT</span>
+        <span>TRANSPARENT PRICING</span>
+      </div>
+
+      <div class="pricing-heading">
+        <div>
+          <span class="pricing-kicker">CHOOSE YOUR EXPERIENCE</span>
+          <h2>
+            Услуги и
+            <span class="gradient-text">стоимость.</span>
+          </h2>
+        </div>
+
+        <p>
+          Каждый проект индивидуален.
+          Итоговая стоимость зависит от сложности,
+          функциональности и объёма работы.
+        </p>
       </div>
 
       <div class="pricing-grid">
 
-        <div class="pricing-card">
+        <article class="pricing-card glass-panel">
 
-          <span class="pricing-label">START</span>
+          <span class="pricing-number">01 / START</span>
+          <h3>Landing Page</h3>
 
-          <h3>Базовый сайт</h3>
-
-          <div class="pricing-price">
-            4 000 ₽
-          </div>
-
-          <p>
-            Для простых проектов
-            и небольших страниц.
+          <p class="pricing-description">
+            Стильная одностраничная презентация
+            для бренда, услуги или проекта.
           </p>
 
-          <a href="contact.html" class="btn btn-secondary">
-            Обсудить
-          </a>
-
-        </div>
-
-        <div class="pricing-card pricing-featured">
-
-          <span class="pricing-label">POPULAR</span>
-
-          <h3>Сайт с дизайном</h3>
-
           <div class="pricing-price">
-            8 000 ₽
+            <span>от</span>
+            <strong>4 000 ₽</strong>
           </div>
 
-          <p>
-            Продуманный дизайн,
-            адаптация и функциональность.
-          </p>
-
-          <a href="contact.html" class="btn btn-primary">
-            Обсудить
-          </a>
-
-        </div>
-
-        <div class="pricing-card">
-
-          <span class="pricing-label">ADVANCED</span>
-
-          <h3>Сложный проект</h3>
-
-          <div class="pricing-price">
-            12 000 ₽
-          </div>
-
-          <p>
-            Более сложные визуальные решения
-            и интерактивные элементы.
-          </p>
-
-          <a href="contact.html" class="btn btn-secondary">
-            Обсудить
-          </a>
-
-        </div>
-
-        <div class="pricing-card">
-
-          <span class="pricing-label">CUSTOM</span>
-
-          <h3>Индивидуально</h3>
-
-          <div class="pricing-price">
-            По запросу
-          </div>
-
-          <p>
-            Стоимость зависит от объёма
-            и сложности проекта.
-          </p>
-
-          <a href="contact.html" class="btn btn-secondary">
-            Обсудить
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- REVIEWS -->
-
-  <section class="reviews-preview section" id="reviews">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <div>
-          <div class="section-label">
-            <span>07 / FEEDBACK</span>
-          </div>
-
-          <h2>Отзывы <span>клиентов</span></h2>
-        </div>
-
-        <a href="reviews.html" class="text-link">
-          Все отзывы ↗
-        </a>
-
-      </div>
-
-      <div class="reviews-placeholder">
-
-        <div class="reviews-placeholder-icon">
-          ✳
-        </div>
-
-        <h3>Здесь будут отзывы</h3>
-
-        <p>
-          Впечатления и мнения людей
-          о совместной работе.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section class="contact-preview section" id="contact">
-
-    <div class="container">
-
-      <div class="contact-content">
-
-        <div class="section-label">
-          <span>08 / CONTACT</span>
-        </div>
-
-        <h2>
-          Есть идея?<br>
-          <span>Давайте воплотим.</span>
-        </h2>
-
-        <p>
-          Расскажи о своей задумке.
-          Вместе превратим её в цифровой проект.
-        </p>
-
-        <div class="contact-actions">
+          <ul>
+            <li>Индивидуальный дизайн</li>
+            <li>Адаптация под телефон</li>
+            <li>Основные анимации</li>
+            <li>Форма или контакты</li>
+          </ul>
 
           <a href="https://t.me/qrennt_workich"
-             class="btn btn-primary">
-            Telegram ↗
+             target="_blank"
+             rel="noopener"
+             class="pricing-button">
+            Обсудить проект <span>↗</span>
           </a>
 
-          <a href="mailto:qrenntw@gmail.com"
-             class="btn btn-secondary">
-            Написать на почту
+        </article>
+
+
+        <article class="pricing-card pricing-featured glass-panel">
+
+          <span class="pricing-popular">POPULAR CHOICE</span>
+          <span class="pricing-number">02 / BUSINESS</span>
+
+          <h3>Multi-page</h3>
+
+          <p class="pricing-description">
+            Многостраничный сайт с полноценной
+            структурой и несколькими разделами.
+          </p>
+
+          <div class="pricing-price">
+            <span>от</span>
+            <strong>8 000 ₽</strong>
+          </div>
+
+          <ul>
+            <li>Уникальный дизайн страниц</li>
+            <li>Адаптивная вёрстка</li>
+            <li>Анимации и эффекты</li>
+            <li>Навигация между разделами</li>
+          </ul>
+
+          <a href="https://t.me/qrennt_workich"
+             target="_blank"
+             rel="noopener"
+             class="pricing-button">
+            Обсудить проект <span>↗</span>
           </a>
 
-        </div>
+        </article>
+
+
+        <article class="pricing-card glass-panel">
+
+          <span class="pricing-number">03 / CUSTOM</span>
+          <h3>Custom Project</h3>
+
+          <p class="pricing-description">
+            Нестандартные цифровые решения
+            с особым дизайном и функциональностью.
+          </p>
+
+          <div class="pricing-price">
+            <span>от</span>
+            <strong>12 000 ₽</strong>
+          </div>
+
+          <ul>
+            <li>Индивидуальная концепция</li>
+            <li>Сложные визуальные эффекты</li>
+            <li>Интерактивные элементы</li>
+            <li>Особая структура проекта</li>
+          </ul>
+
+          <a href="https://t.me/qrennt_workich"
+             target="_blank"
+             rel="noopener"
+             class="pricing-button">
+            Обсудить проект <span>↗</span>
+          </a>
+
+        </article>
 
       </div>
 
-    </div>
+      <p class="pricing-note">
+        * Указаны стартовые ориентиры. Финальная стоимость
+        согласовывается до начала работы.
+      </p>
 
-  </section>
+    </section>
+
+
+    <!-- REVIEWS -->
+
+    <section class="reviews-section reveal" id="reviews">
+
+      <div class="section-label">
+        <span>07 / CLIENT FEEDBACK</span>
+        <span>REAL EXPERIENCES</span>
+      </div>
+
+      <div class="reviews-heading">
+        <div>
+          <span class="pricing-kicker">WHAT PEOPLE SAY</span>
+          <h2>
+            Мнение о
+            <span class="gradient-text">работе.</span>
+          </h2>
+        </div>
+
+        <span class="reviews-symbol">“</span>
+      </div>
+
+      <div class="reviews-grid">
+
+        <article class="review-card glass-panel">
+          <span class="review-status">REVIEW SLOT 01</span>
+          <div class="review-stars">★★★★★</div>
+
+          <p>
+            Здесь появится настоящий отзыв клиента
+            о работе над проектом.
+          </p>
+
+          <div class="review-author">
+            <div class="review-avatar">01</div>
+            <div>
+              <strong>Имя клиента</strong>
+              <span>Название проекта</span>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="review-card glass-panel">
+          <span class="review-status">REVIEW SLOT 02</span>
+          <div class="review-stars">★★★★★</div>
+
+          <p>
+            Здесь появится настоящий отзыв клиента
+            о дизайне, процессе и результате.
+          </p>
+
+          <div class="review-author">
+            <div class="review-avatar">02</div>
+            <div>
+              <strong>Имя клиента</strong>
+              <span>Название проекта</span>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="review-card glass-panel">
+          <span class="review-status">REVIEW SLOT 03</span>
+          <div class="review-stars">★★★★★</div>
+
+          <p>
+            Здесь появится ещё один отзыв
+            после завершения проекта.
+          </p>
+
+          <div class="review-author">
+            <div class="review-avatar">03</div>
+            <div>
+              <strong>Имя клиента</strong>
+              <span>Название проекта</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="reviews-note">
+        Здесь будут размещаться отзывы реальных клиентов.
+      </p>
+
+    </section>
+
+
+    <!-- CONTACT CTA -->
+
+    <section class="contact-section reveal">
+
+      <span class="section-label">08 / START SOMETHING NEW</span>
+
+      <h2 data-i18n="contactTitle">
+        Есть идея?
+        <span class="gradient-text">Создадим её вместе.</span>
+      </h2>
+
+      <p data-i18n="contactText">
+        Расскажи о своей задумке — обсудим, каким может быть твой проект.
+      </p>
+
+      <a
+        href="https://t.me/qrennt_workich"
+        target="_blank"
+        rel="noopener"
+        class="contact-main-button"
+      >
+        <span data-i18n="contactButton">Написать в Telegram</span>
+        <span>↗</span>
+      </a>
+
+      <a href="mailto:qrenntw@gmail.com" class="email-link">
+        qrenntw@gmail.com
+      </a>
+
+    </section>
+
+  </main>
+
 
   <!-- FOOTER -->
 
   <footer class="footer">
 
-    <div class="container footer-inner">
+    <a href="index.html" class="logo">
+      QRENNT<span>.</span>
+    </a>
 
-      <div class="footer-top">
+    <span>© 2026 QRENNT. <span data-i18n="rights">Все права защищены.</span></span>
 
-        <a href="index.html" class="logo">
-          QRENNT<span>.</span>
-        </a>
-
-        <p>
-          Digital experiences<br>
-          crafted with intention.
-        </p>
-
-      </div>
-
-      <div class="footer-links">
-
-        <a href="projects.html">Проекты</a>
-        <a href="about.html">Обо мне</a>
-        <a href="services.html">Услуги</a>
-        <a href="reviews.html">Отзывы</a>
-        <a href="contact.html">Контакты</a>
-
-      </div>
-
-      <div class="footer-bottom">
-
-        <span>© 2026 QRENNT</span>
-
-        <span>DESIGNED & DEVELOPED BY QRENNT</span>
-
-        <a href="https://t.me/qrennt_workich">
-          TELEGRAM ↗
-        </a>
-
-      </div>
-
+    <div class="footer-links">
+      <a href="https://t.me/qrennt_workich" target="_blank" rel="noopener">TELEGRAM ↗</a>
+      <a href="mailto:qrenntw@gmail.com">EMAIL ↗</a>
     </div>
 
   </footer>
