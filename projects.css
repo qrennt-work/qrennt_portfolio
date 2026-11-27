@@ -370,69 +370,107 @@ body::before {
 .project-link span:last-child { font-size: 17px; transition: transform .3s; }
 .project-link:hover span:last-child { transform: translate(4px,-4px); }
 
-/* BLACK PANAMERA */
+/* BLACK PANAMERA — STATIC CUSTOM CREST */
+
 .visual-car {
-  background: radial-gradient(ellipse at 50% 80%, #17442b, #09130d 55%, #050907);
+  background:
+    radial-gradient(ellipse at 50% 80%, #17442b, #09130d 55%, #050907);
 }
-.car-scene {
-  position: absolute;
-  width: 82%;
-  height: 140px;
-  left: 9%;
-  top: 95px;
-  animation: carHover 5s ease-in-out infinite;
+
+.visual-car .car-body,
+.visual-car .car-window,
+.visual-car .car-wheel,
+.visual-car .car-light,
+.visual-car .car-floor {
+  display: none !important;
 }
-.car-body {
+
+.crest-scene {
   position: absolute;
+  inset: 0;
   width: 100%;
-  height: 55px;
-  bottom: 25px;
-  border-radius: 55% 35% 22% 20%;
-  background: linear-gradient(170deg, #56655b, #111b15 32%, #020504 75%);
-  border-bottom: 3px solid #8cffb0;
-  box-shadow: 0 18px 30px #000, inset 0 4px 10px rgba(255,255,255,.3);
-  transform: skewX(-8deg);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: none !important;
 }
-.car-window {
+
+.crest-glow {
   position: absolute;
-  width: 43%;
-  height: 48px;
-  left: 30%;
-  top: 18px;
-  background: linear-gradient(135deg, #b3e8c2, #17291e 35%, #030806);
-  clip-path: polygon(20% 0, 78% 0, 100% 100%, 0 100%);
-  border-top: 1px solid #9bffb8;
-}
-.car-light {
-  position: absolute;
-  right: 0;
-  bottom: 60px;
-  width: 28px;
-  height: 5px;
-  background: #aaffbf;
-  box-shadow: 0 0 20px #7dff9f;
-  transform: rotate(-8deg);
-}
-.car-wheel {
-  position: absolute;
-  bottom: 2px;
-  width: 42px;
-  height: 42px;
-  border: 7px solid #101711;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  background: radial-gradient(circle, #b6ffc9 0 12%, #293c30 14% 35%, #050806 38%);
-  box-shadow: 0 0 0 1px #668c70;
+  background: radial-gradient(
+    circle,
+    rgba(95,210,135,.16) 0%,
+    rgba(95,210,135,.06) 42%,
+    transparent 72%
+  );
+  filter: blur(25px);
 }
-.wheel-left { left: 17%; }
-.wheel-right { right: 14%; }
-.car-floor {
-  position: absolute;
-  bottom: 0;
+
+.car-crest {
+  position: relative;
+  width: 180px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.crest-inner {
+  position: relative;
+  width: 145px;
+  height: 185px;
+  border: 1px solid rgba(185,220,195,.42);
+  border-radius: 48% 48% 45% 45%;
+  background:
+    linear-gradient(145deg, #1a211d, #080c09 55%, #17221b);
+  box-shadow:
+    inset 0 0 20px rgba(255,255,255,.035),
+    inset 0 0 45px rgba(0,0,0,.5),
+    0 0 25px rgba(90,210,130,.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.crest-top,
+.crest-bottom {
+  color: #a6cbb3;
+  font-family: var(--display);
+  letter-spacing: 3px;
+  font-size: 9px;
+  text-align: center;
+}
+
+.crest-symbol {
+  width: 90px;
+  height: 105px;
+  color: #c4d7cb;
+  filter: drop-shadow(0 0 6px rgba(112,230,160,.18));
+}
+
+.crest-symbol svg {
   width: 100%;
-  height: 15px;
-  background: #8cffb0;
-  filter: blur(30px);
-  opacity: .35;
+  height: 100%;
+}
+
+.crest-bottom {
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+
+.crest-scene *,
+.crest-scene *::before,
+.crest-scene *::after {
+  animation: none !important;
+  transition: none !important;
 }
 
 /* AUTO LINE LAB */
@@ -734,11 +772,14 @@ body::before {
   .hero-orb { right: 0; opacity: .65; transform: scale(.8); }
   .hero h1 { letter-spacing: -4px; }
 }
+
 @media (max-width: 680px) {
   .site-header, .hero, .work-section, .footer, .end-panel {
     width: calc(100% - 36px);
   }
+
   .site-header { height: 72px; }
+
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -748,7 +789,9 @@ body::before {
     padding: 10px;
     z-index: 25;
   }
+
   .menu-toggle span { width: 23px; height: 1px; background: var(--green); }
+
   .nav {
     display: none;
     position: absolute;
@@ -764,31 +807,45 @@ body::before {
     background: rgba(5,12,8,.96);
     backdrop-filter: blur(25px);
   }
+
   .nav.open { display: flex; }
   .nav a { font-size: 13px; }
   .header-right { margin-left: auto; margin-right: 12px; }
+
   .hero { min-height: 560px; padding-top: 90px; }
   .hero h1 { font-size: clamp(48px, 12vw, 72px); letter-spacing: -3px; }
+
   .hero-orb { width: 220px; height: 220px; top: 240px; right: -35px; opacity: .45; }
   .orb-glass { width: 125px; height: 125px; }
   .ring-one { width: 210px; height: 85px; }
   .ring-two { width: 240px; height: 105px; }
+
   .word-one { top: 220px; right: 4%; }
   .word-two { bottom: 80px; right: 0; }
   .word-three { display: none; }
+
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
   .hero-bottom p { font-size: 12px; }
+
   .section-heading { align-items: flex-start; gap: 15px; }
   .section-heading h2 { font-size: 34px; letter-spacing: -2px; }
   .section-heading > p { font-size: 9px; }
+
   .project-grid { grid-template-columns: 1fr; gap: 18px; }
   .project-visual { height: 250px; }
   .project-info { padding: 22px; }
   .project-info p { min-height: 0; }
+
+  .car-crest { width: 145px; height: 190px; }
+  .crest-inner { width: 125px; height: 165px; }
+  .crest-symbol { width: 78px; height: 92px; }
+
   .end-panel { padding: 48px 25px; }
   .end-panel h2 { font-size: 39px; letter-spacing: -2px; }
+
   .footer { flex-wrap: wrap; padding: 25px 0; }
 }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     scroll-behavior: auto !important;
