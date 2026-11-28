@@ -520,3 +520,16 @@ a {
     scroll-behavior: auto !important;
   }
 }
+@media (max-width: 768px) {
+  .price-card li::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+    margin-right: 13px;
+    vertical-align: 2px;
+  }
+}
