@@ -1,0 +1,42 @@
+/* =====================================
+   QRENNT — SYMBOL STYLING
+   ===================================== */
+
+.qrennt-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: -0.12em;
+  line-height: 1;
+}
+
+.qrennt-symbol-original {
+  display: inline;
+}
+
+.qrennt-symbol-icon {
+  display: none;
+  width: 1em;
+  height: 1em;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.qrennt-symbol-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .qrennt-symbol-original {
+    display: none;
+  }
+
+  .qrennt-symbol-icon {
+    display: inline-flex;
+  }
+}
